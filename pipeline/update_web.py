@@ -12,7 +12,7 @@ from datetime import datetime
 HERE = pathlib.Path(__file__).parent
 ROOT = HERE.parent
 HTML = ROOT / "index.html"
-MARKER = "573638"
+MARKER = "777254"
 
 scan = json.loads((HERE / "scan_latest.json").read_text(encoding="utf-8"))
 deals = scan.get("deals", [])
