@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ViajeBarato — Chollos de vuelos desde Valencia y España</title>
+<meta name="description" content="Los mejores chollos de vuelos desde Valencia (VLC), Madrid y Barcelona, gratis en tu email. Detección automática de precios anómalos — sin spam.">
+<style>
+  :root{--ink:#0d1b2a;--accent:#e63946;--bg:#f8fafc;--card:#ffffff;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;}
+  header{background:linear-gradient(135deg,#0d1b2a 0%,#1b3a5c 100%);color:#fff;padding:4rem 1.5rem 5rem;text-align:center;}
+  h1{font-size:clamp(2.2rem,6vw,3.5rem);font-weight:800;letter-spacing:-1px;}
+  h1 span{color:var(--accent);}
+  .tagline{font-size:clamp(1.05rem,2.5vw,1.35rem);opacity:.9;margin-top:.75rem;}
+  .hero-sub{margin-top:1rem;opacity:.65;font-size:.95rem;}
+  .card{max-width:640px;margin:-2.5rem auto 0;background:var(--card);border-radius:16px;box-shadow:0 10px 40px rgba(13,27,42,.15);padding:2.5rem;margin-bottom:3rem;}
+  .card h2{font-size:1.25rem;margin-bottom:.5rem;}
+  .card p{color:#475569;font-size:.95rem;margin-bottom:1.5rem;}
+  form{display:flex;flex-direction:column;gap:.75rem;}
+  input[type=email]{padding:.9rem 1.1rem;border:2px solid #e2e8f0;border-radius:10px;font-size:1rem;outline:none;transition:border .2s;}
+  input[type=email]:focus{border-color:var(--accent);}
+  .origins{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem;}
+  .origins label{cursor:pointer;}
+  .origins input{display:none;}
+  .origins span{padding:.45rem .9rem;border:2px solid #e2e8f0;border-radius:999px;font-size:.85rem;font-weight:600;color:#64748b;transition:.15s;}
+  .origins input:checked+span{border-color:var(--accent);color:var(--accent);background:#fdeced;}
+  button{padding:.95rem 1.1rem;background:var(--accent);color:#fff;border:none;border-radius:10px;font-size:1.05rem;font-weight:700;cursor:pointer;transition:transform .1s,background .2s;}
+  button:hover{background:#d62839;transform:translateY(-1px);}
+  .fine{font-size:.78rem;color:#94a3b8;margin-top:1rem;text-align:center;}
+  .features{max-width:900px;margin:0 auto 3.5rem;padding:0 1.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;}
+  .feature{background:var(--card);border-radius:12px;padding:1.5rem;box-shadow:0 2px 12px rgba(13,27,42,.06);}
+  .feature .ico{font-size:1.8rem;margin-bottom:.5rem;}
+  .feature h3{font-size:1rem;margin-bottom:.35rem;}
+  .feature p{font-size:.88rem;color:#64748b;}
+  .example{max-width:640px;margin:0 auto 4rem;padding:0 1.5rem;}
+  .example h2{text-align:center;margin-bottom:1.25rem;}
+  .deal{background:var(--card);border-left:4px solid var(--accent);border-radius:8px;padding:1.1rem 1.3rem;margin-bottom:.75rem;box-shadow:0 2px 8px rgba(13,27,42,.05);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;}
+  .deal .route{font-weight:700;font-size:1.05rem;}
+  .deal .meta{font-size:.82rem;color:#64748b;}
+  .deal .price{font-size:1.3rem;font-weight:800;color:var(--accent);}
+  .deal .old{font-size:.8rem;color:#94a3b8;text-decoration:line-through;font-weight:400;}
+  footer{text-align:center;padding:2.5rem 1.5rem;color:#94a3b8;font-size:.85rem;}
+  footer a{color:#64748b;}
+</style>
+</head>
+<body>
+<header>
+  <h1>Viaje<span>Barato</span>✈️</h1>
+  <p class="tagline">Chollos de vuelos detectados automáticamente, gratis en tu email</p>
+  <p class="hero-sub">Vigilamos miles de rutas desde Valencia, Madrid y Barcelona 24/7. Tú solo recibes los precios anómalos.</p>
+</header>
+
+<div class="card">
+  <h2>Recibe los chollos antes que nadie</h2>
+  <p>Sin spam. Solo alertas cuando un precio cae muy por debajo de lo normal. Date de baja cuando quieras.</p>
+  <form id="sub" action="https://formsubmit.co/your@email.com" method="POST">
+    <div class="origins">
+      <label><input type="radio" name="origen" value="VLC" checked><span>Valencia (VLC)</span></label>
+      <label><input type="radio" name="origen" value="MAD"><span>Madrid (MAD)</span></label>
+      <label><input type="radio" name="origen" value="BCN"><span>Barcelona (BCN)</span></label>
+      <label><input type="radio" name="origen" value="ALL"><span>Todos</span></label>
+    </div>
+    <input type="email" name="email" placeholder="tu@email.com" required>
+    <input type="hidden" name="_subject" value="Nuevo suscriptor ViajeBarato">
+    <button type="submit">Quiero mis chollos 💌</button>
+    <p class="fine">Al suscribirte aceptas recibir alertas de vuelos. 0€ siempre, o hasta que decidas lo contrario.</p>
+  </form>
+</div>
+
+<div class="features">
+  <div class="feature"><div class="ico">🤖</div><h3>Detección automática</h3><p>Software vigilando precios de miles de rutas a diario. Nada de listas cerradas: seguimos las rutas de moda.</p></div>
+  <div class="feature"><div class="ico">📉</div><h3>Solo anomalías reales</h3><p>Un chollo solo se envía si está muy por debajo del precio típico de esa ruta. Sin ruido.</p></div>
+  <div class="feature"><div class="ico">🛫</div><h3>Origen Levante</h3><p>Cubrimos Valencia primero, con Madrid y Barcelona en camino. Rutas que las webs globales ignoran.</p></div>
+</div>
+
+<div class="example">
+  <h2>Así luce una alerta</h2>
+  <div class="deal"><div><div class="route">Valencia → Palma de Mallorca</div><div class="meta">ida y vuelta · octubre · directo Ryanair</div></div><div><span class="old">120€</span> <span class="price">29€</span></div></div>
+  <div class="deal"><div><div class="route">Valencia → Londres</div><div class="meta">solo ida · noviembre · directo</div></div><div><span class="old">90€</span> <span class="price">24€</span></div></div>
+  <div class="deal"><div><div class="route">Madrid → Nueva York</div><div class="meta">ida y vuelta · enero · 1 escala</div></div><div><span class="old">520€</span> <span class="price">319€</span></div></div>
+</div>
+
+<footer>
+  ViajeBarato © 2026 · Hecho en Valencia 🍊 · <a href="mailto:hola@viajebarato.es">hola@viajebarato.es</a><br>
+  <em>Ejemplos ilustrativos — los precios reales llegan por email.</em>
+</footer>
+</body>
+</html>
