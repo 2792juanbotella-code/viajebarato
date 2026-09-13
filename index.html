@@ -1,98 +1,140 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ViajeBarato — Chollos de vuelos desde Valencia y España</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VIAJEBARATO — Chollos de vuelo desde España</title>
+<meta name="description" content="Chollos de vuelo verificados desde aeropuertos de España. Busca, compara y reserva al mejor precio.">
+<style>
+  :root{--bg:#0b1220;--card:#121a2b;--line:#1f2b42;--txt:#e8edf7;--mut:#8fa0bd;--acc:#ff7a1a;--ok:#2ecc71}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--txt);line-height:1.5}
+  .wrap{max-width:960px;margin:0 auto;padding:20px}
+  header{padding:28px 0 10px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+  h1{font-size:1.9rem;letter-spacing:.5px}
+  h1 b{color:var(--acc)}
+  .tag{color:var(--mut);font-size:.95rem}
+  section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;margin:18px 0}
+  h2{font-size:1.15rem;margin-bottom:14px}
+  .grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+  label{font-size:.8rem;color:var(--mut);display:block;margin-bottom:4px}
+  input,select{width:100%;padding:10px;border-radius:8px;border:1px solid var(--line);background:#0d1526;color:var(--txt);font-size:1rem}
+  input:focus,select:focus{outline:2px solid var(--acc)}
+  button.cta{width:100%;padding:13px;border:0;border-radius:10px;background:var(--acc);color:#14100b;font-weight:700;font-size:1.05rem;cursor:pointer}
+  button.cta:hover{filter:brightness(1.08)}
+  .btn{display:inline-block;padding:9px 14px;border-radius:8px;background:#1c2941;color:var(--txt);border:1px solid var(--line);text-decoration:none;font-size:.9rem}
+  .btn:hover{border-color:var(--acc)}
+  table{width:100%;border-collapse:collapse;font-size:.92rem}
+  th{color:var(--mut);text-align:left;font-weight:600;padding:8px;border-bottom:1px solid var(--line)}
+  td{padding:9px 8px;border-bottom:1px solid var(--line)}
+  .price{color:var(--ok);font-weight:700;white-space:nowrap}
+  .dir{color:var(--mut);font-size:.8rem}
+  .note{color:var(--mut);font-size:.8rem;margin-top:10px}
+  .big{display:block;text-align:center;padding:16px;border-radius:10px;background:var(--acc);color:#14100b;font-weight:700;text-decoration:none}
+  .big:hover{filter:brightness(1.08)}
+  footer{padding:26px 0;color:var(--mut);font-size:.78rem}
+  .twocol{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+  @media(max-width:640px){.twocol{grid-template-columns:1fr}}
+</style>
 <script nowprocket data-noptimize="1" data-cfasync="false" data-wpfc-render="false" seraph-accel-crit="1" data-no-defer="1" data-cmp-ab="2">
   (function () {
       var script = document.createElement("script");
       script.async = 1;
       script.setAttribute("data-cmp-ab","2");
-      script.src = 'https://emrldco.com/NTczNjM4.js?t=573638';
+      script.src = 'https://emrldco.com/573638.js?t=573638';
       document.head.appendChild(script);
   })();
 </script>
-<meta name="description" content="Los mejores chollos de vuelos desde Valencia (VLC), Madrid y Barcelona, gratis en tu email. Detección automática de precios anómalos — sin spam.">
-<style>
-  :root{--ink:#0d1b2a;--accent:#e63946;--bg:#f8fafc;--card:#ffffff;}
-  *{margin:0;padding:0;box-sizing:border-box;}
-  body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;}
-  header{background:linear-gradient(135deg,#0d1b2a 0%,#1b3a5c 100%);color:#fff;padding:4rem 1.5rem 5rem;text-align:center;}
-  h1{font-size:clamp(2.2rem,6vw,3.5rem);font-weight:800;letter-spacing:-1px;}
-  h1 span{color:var(--accent);}
-  .tagline{font-size:clamp(1.05rem,2.5vw,1.35rem);opacity:.9;margin-top:.75rem;}
-  .hero-sub{margin-top:1rem;opacity:.65;font-size:.95rem;}
-  .card{max-width:640px;margin:-2.5rem auto 0;background:var(--card);border-radius:16px;box-shadow:0 10px 40px rgba(13,27,42,.15);padding:2.5rem;margin-bottom:3rem;}
-  .card h2{font-size:1.25rem;margin-bottom:.5rem;}
-  .card p{color:#475569;font-size:.95rem;margin-bottom:1.5rem;}
-  form{display:flex;flex-direction:column;gap:.75rem;}
-  input[type=email]{padding:.9rem 1.1rem;border:2px solid #e2e8f0;border-radius:10px;font-size:1rem;outline:none;transition:border .2s;}
-  input[type=email]:focus{border-color:var(--accent);}
-  .origins{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem;}
-  .origins label{cursor:pointer;}
-  .origins input{display:none;}
-  .origins span{padding:.45rem .9rem;border:2px solid #e2e8f0;border-radius:999px;font-size:.85rem;font-weight:600;color:#64748b;transition:.15s;}
-  .origins input:checked+span{border-color:var(--accent);color:var(--accent);background:#fdeced;}
-  button{padding:.95rem 1.1rem;background:var(--accent);color:#fff;border:none;border-radius:10px;font-size:1.05rem;font-weight:700;cursor:pointer;transition:transform .1s,background .2s;}
-  button:hover{background:#d62839;transform:translateY(-1px);}
-  .fine{font-size:.78rem;color:#94a3b8;margin-top:1rem;text-align:center;}
-  .features{max-width:900px;margin:0 auto 3.5rem;padding:0 1.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;}
-  .feature{background:var(--card);border-radius:12px;padding:1.5rem;box-shadow:0 2px 12px rgba(13,27,42,.06);}
-  .feature .ico{font-size:1.8rem;margin-bottom:.5rem;}
-  .feature h3{font-size:1rem;margin-bottom:.35rem;}
-  .feature p{font-size:.88rem;color:#64748b;}
-  .example{max-width:640px;margin:0 auto 4rem;padding:0 1.5rem;}
-  .example h2{text-align:center;margin-bottom:1.25rem;}
-  .deal{background:var(--card);border-left:4px solid var(--accent);border-radius:8px;padding:1.1rem 1.3rem;margin-bottom:.75rem;box-shadow:0 2px 8px rgba(13,27,42,.05);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;}
-  .deal .route{font-weight:700;font-size:1.05rem;}
-  .deal .meta{font-size:.82rem;color:#64748b;}
-  .deal .price{font-size:1.3rem;font-weight:800;color:var(--accent);}
-  .deal .old{font-size:.8rem;color:#94a3b8;text-decoration:line-through;font-weight:400;}
-  footer{text-align:center;padding:2.5rem 1.5rem;color:#94a3b8;font-size:.85rem;}
-  footer a{color:#64748b;}
-</style>
 </head>
 <body>
-<header>
-  <h1>Viaje<span>Barato</span>✈️</h1>
-  <p class="tagline">Chollos de vuelos detectados automáticamente, gratis en tu email</p>
-  <p class="hero-sub">Vigilamos miles de rutas desde Valencia, Madrid y Barcelona 24/7. Tú solo recibes los precios anómalos.</p>
-</header>
+<div class="wrap">
 
-<div class="card">
-  <h2>Recibe los chollos antes que nadie</h2>
-  <p>Sin spam. Solo alertas cuando un precio cae muy por debajo de lo normal. Date de baja cuando quieras.</p>
-  <form id="sub" action="https://formsubmit.co/pablo4set@gmail.com" method="POST">
-    <div class="origins">
-      <label><input type="radio" name="origen" value="VLC" checked><span>Valencia (VLC)</span></label>
-      <label><input type="radio" name="origen" value="MAD"><span>Madrid (MAD)</span></label>
-      <label><input type="radio" name="origen" value="BCN"><span>Barcelona (BCN)</span></label>
-      <label><input type="radio" name="origen" value="ALL"><span>Todos</span></label>
+  <header>
+    <h1>VIAJE<b>BARATO</b></h1>
+    <span class="tag">Chollos de vuelo verificados · desde los 36 aeropuertos de España</span>
+  </header>
+
+  <!-- BUSCADOR -->
+  <section>
+    <h2>✈️ Busca tu vuelo</h2>
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(120px,1fr)) 1fr;">
+      <div><label>Origen (IATA)</label><input id="origen" value="VLC" maxlength="3" placeholder="VLC"></div>
+      <div><label>Destino (IATA)</label><input id="destino" maxlength="3" placeholder="PMI"></div>
+      <div><label>Fecha</label><input id="fecha" type="date"></div>
+      <div><label>Pasajeros</label><select id="pax"><option>1</option><option>2</option><option>3</option><option>4</option></select></div>
+      <div style="align-self:end"><button class="cta" onclick="buscar()">Buscar vuelo</button></div>
     </div>
-    <input type="email" name="email" placeholder="tu@email.com" required>
-    <input type="hidden" name="_subject" value="Nuevo suscriptor ViajeBarato">
-    <button type="submit">Quiero mis chollos 💌</button>
-    <p class="fine">Al suscribirte aceptas recibir alertas de vuelos. 0€ siempre, o hasta que decidas lo contrario.</p>
-  </form>
+    <p class="note">Ejemplos de códigos: VLC Valencia · MAD Madrid · BCN Barcelona · PMI Mallorca · LON Londres · NYC Nueva York</p>
+  </section>
+
+  <!-- CHOLLOS -->
+  <section>
+    <h2>🔥 Chollos vigilados <span class="dir">(foto 13/09/2026 · curva diaria)</span></h2>
+    <div style="overflow-x:auto">
+    <table>
+      <tr><th>Ruta</th><th>Salida</th><th>Precio</th><th>Aerolínea</th><th>Escalas</th><th></th></tr>
+      <!-- DEALS_START -->
+      <tr><td>VLC → PMI</td><td>09 Dec</td><td class="price">11 €</td><td>—</td><td>—</td><td><a class="btn" target="_blank" rel="nofollow" href="https://tp.media/r?marker=573638&p=4114&u=/search/VLC0912PMI1?t=VY17968062001796809500000055VLCPMI_95e487763f0ca86c81c3b7783f58340d_1096&search_date=10092026&expected_price_uuid=01a08b10-54c7-8050-e1db-bc158e1bb210&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=n0OnddzAUE4HsxDZ1FdUhQ&expected_price_source=share&expected_price_currency=eur&expected_price=11">Ver</a></td></tr>
+      <tr><td>BCN → MIL</td><td>17 Nov</td><td class="price">11 €</td><td>—</td><td>—</td><td><a class="btn" target="_blank" rel="nofollow" href="https://tp.media/r?marker=573638&p=4114&u=/search/BCN1711MIL1?t=U217948994001794905700000105BCNMXP_80f451d0a8694c72183a3dd9fa196247_1108&search_date=10092026&expected_price_uuid=01a08c8b-71b5-8050-abef-c418e3ae0f66&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=xXjWzBPLVPTD7zPnNsvCvg&expected_price_source=share&expected_price_currency=eur&expected_price=11">Ver</a></td></tr>
+      <tr><td>VLC → MIL</td><td>24 Sep</td><td class="price">16 €</td><td>—</td><td>—</td><td><a class="btn" target="_blank" rel="nofollow" href="https://tp.media/r?marker=573638&p=4114&u=/search/VLC2409MIL1?t=FR17902908001790298000000120VLCMXP_145a23b2331f3c302472afa638df4dc4_1600&search_date=11092026&expected_price_uuid=01a090af-7d25-8030-ee7d-9c6a5a4f5ec2&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=TFbsgs9SPBEXbuLIswMMxw&expected_price_source=share&expected_price_currency=eur&expected_price=16">Ver</a></td></tr>
+      <tr><td>MAD → LIS</td><td>21 Oct</td><td class="price">16 €</td><td>—</td><td>—</td><td><a class="btn" target="_blank" rel="nofollow" href="https://tp.media/r?marker=573638&p=4114&u=/search/MAD2110LIS1?t=FR17925636001792565400000090MADLIS_d6a2c01de99be4dd8739b62308d1b2fb_1536&search_date=13092026&expected_price_uuid=01a09a47-0acd-8030-ebf0-27ba7f8bcf34&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=JzcFGWlZuKlzjKaAcMjprg&expected_price_source=share&expected_price_currency=eur&expected_price=16">Ver</a></td></tr>
+      <tr><td>MAD → MIL</td><td>22 Jan</td><td class="price">16 €</td><td>—</td><td>—</td><td><a class="btn" target="_blank" rel="nofollow" href="https://tp.media/r?marker=573638&p=4114&u=/search/MAD2201MIL1?t=W418006117001800619800000135MADMXP_cd506f7a92bb8b80e40d5e78e1b37bcb_1563&search_date=12092026&expected_price_uuid=01a097b8-4e47-8040-a32c-f06fa63f4084&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=WgqjNNCuo7Okk9KtWbFDnA&expected_price_source=share&expected_price_currency=eur&expected_price=16">Ver</a></td></tr>
+      <tr><td>VLC → ROM</td><td>31 Oct</td><td class="price">17 €</td><td>—</td><td>—</td><td><a class="btn" target="_blank" rel="nofollow" href="https://tp.media/r?marker=573638&p=4114&u=/search/VLC3110ROM1?t=W417934843001793491800000125VLCFCO_4d9bbb40f288cfb1f38c7eea4e042d3c_1693&search_date=08092026&expected_price_uuid=01a08226-eb3e-8050-21b5-f8f9f1242774&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=ll2BrnZO65q8QkHV45YbEQ&expected_price_source=share&expected_price_currency=eur&expected_price=17">Ver</a></td></tr>
+      <tr><td>VLC → OVD</td><td>04 Nov</td><td class="price">18 €</td><td>—</td><td>—</td><td><a class="btn" target="_blank" rel="nofollow" href="https://tp.media/r?marker=573638&p=4114&u=/search/VLC0411OVD1?t=W417937924001793797800000090VLCOVD_43f63cd2a57b9b213937985efcf8eb88_1768&search_date=10092026&expected_price_uuid=01a08cec-afcd-8030-26c3-036f2598a4cc&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=xOhwWp9LQpWVQk59FtV2Rg&expected_price_source=share&expected_price_currency=eur&expected_price=18">Ver</a></td></tr>
+      <tr><td>MAD → LON</td><td>14 Dec</td><td class="price">18 €</td><td>—</td><td>—</td><td><a class="btn" target="_blank" rel="nofollow" href="https://tp.media/r?marker=573638&p=4114&u=/search/MAD1412LON1?t=U217972445001797249600000145MADLTN_8c1ba51ca0b5159cf55d2727e0015834_1748&search_date=11092026&expected_price_uuid=01a092af-165b-8030-aba9-4b45b7e2cc34&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=g0stvsGI4FmedJadqEYR6A&expected_price_source=share&expected_price_currency=eur&expected_price=18">Ver</a></td></tr>
+      <tr><td>VLC → BRU</td><td>15 Dec</td><td class="price">21 €</td><td>—</td><td>—</td><td><a class="btn" target="_blank" rel="nofollow" href="https://tp.media/r?marker=573638&p=4114&u=/search/VLC1512BRU1?t=VY17973369001797345600000145VLCBRU_331fe7f73e5809b6ee5d5a3cc13a8ad2_2082&search_date=10092026&expected_price_uuid=01a08c0d-763e-8030-ed4b-1031d3a896fa&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=YV2EBCrJ9q7ZmIUaxd-7Cw&expected_price_source=share&expected_price_currency=eur&expected_price=21">Ver</a></td></tr>
+      <tr><td>MAD → ROM</td><td>18 Nov</td><td class="price">21 €</td><td>—</td><td>—</td><td><a class="btn" target="_blank" rel="nofollow" href="https://tp.media/r?marker=573638&p=4114&u=/search/MAD1811ROM1?t=W417949939001795002900000150MADFCO_4cb5c245f2a0468c47228dfe2c59a110_2055&search_date=13092026&expected_price_uuid=01a09c19-558c-8030-e6fc-d5416512cb51&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=rdYfMgzO3-INJt15kOm-EQ&expected_price_source=share&expected_price_currency=eur&expected_price=21">Ver</a></td></tr>
+      <tr><td colspan="6" class="note">Actualizado 14/09/2026 00:40 · precios de un solo día, sin equipaje</td></tr>
+    <!-- DEALS_END -->
+    </table>
+    </div>
+    <p class="note">Precios orientativos (Google Flights, sin equipaje facturado) del 13/09/2026; se confirman al abrir la reserva. La tabla se actualiza con la foto diaria de precios.</p>
+  </section>
+
+  <!-- HOTELES + TOURS -->
+  <section class="twocol">
+    <div>
+      <h2>🏨 Hoteles</h2>
+      <p class="note" style="margin:0 0 12px">Compara entre +70 proveedores (Booking, Agoda, Expedia…) en un solo click.</p>
+      <a class="big" target="_blank" rel="nofollow" href="https://tp.media/r?marker=573638.webh&u=https%3A%2F%2Fhotellook.com&p=4115&campaign_id=101">Buscar hotel</a>
+    </div>
+    <div>
+      <h2>🎟️ Excursiones y tours</h2>
+      <p class="note" style="margin:0 0 12px">Actividades, entradas skip-the-line y experiencias en tu destino.</p>
+      <a class="big" target="_blank" rel="nofollow" href="https://klook.tpm.li/rpnjWxHi">Ver actividades</a>
+    </div>
+  </section>
+
+  
+  <!-- SUBSCRIBE -->
+  <section>
+    <h2>📬 Recibe los chollos antes que nadie</h2>
+    <p class="note" style="margin:0 0 12px">Sin spam. Solo cuando un precio cae muy por debajo de lo normal. Date de baja cuando quieras.</p>
+    <form action="https://formsubmit.co/pablo4set@gmail.com" method="POST" style="display:flex;gap:10px;flex-wrap:wrap">
+      <input type="email" name="email" placeholder="tu@email.com" required style="flex:1;min-width:200px">
+      <input type="hidden" name="_subject" value="Nuevo suscriptor ViajeBarato">
+      <button class="cta" type="submit" style="width:auto;padding:10px 22px">avisarme</button>
+    </form>
+  </section>
+
+  <footer>
+    VIAJEBARATO · Transparencia: esta página contiene enlaces de afiliado (Travelpayouts); si reservas a través de ellos podemos recibir una comisión sin coste adicional para ti. Precios orientativos sujetos a disponibilidad; el precio final se confirma en el proceso de reserva. Alojado de forma estática; sin cookies propias.
+  </footer>
 </div>
 
-<div class="features">
-  <div class="feature"><div class="ico">🤖</div><h3>Detección automática</h3><p>Software vigilando precios de miles de rutas a diario. Nada de listas cerradas: seguimos las rutas de moda.</p></div>
-  <div class="feature"><div class="ico">📉</div><h3>Solo anomalías reales</h3><p>Un chollo solo se envía si está muy por debajo del precio típico de esa ruta. Sin ruido.</p></div>
-  <div class="feature"><div class="ico">🛫</div><h3>Origen Levante</h3><p>Cubrimos Valencia primero, con Madrid y Barcelona en camino. Rutas que las webs globales ignoran.</p></div>
-</div>
-
-<div class="example">
-  <h2>Así luce una alerta</h2>
-  <div class="deal"><div><div class="route">Valencia → Palma de Mallorca</div><div class="meta">ida y vuelta · octubre · directo Ryanair</div></div><div><span class="old">120€</span> <span class="price">29€</span></div></div>
-  <div class="deal"><div><div class="route">Valencia → Londres</div><div class="meta">solo ida · noviembre · directo</div></div><div><span class="old">90€</span> <span class="price">24€</span></div></div>
-  <div class="deal"><div><div class="route">Madrid → Nueva York</div><div class="meta">ida y vuelta · enero · 1 escala</div></div><div><span class="old">520€</span> <span class="price">319€</span></div></div>
-</div>
-
-<footer>
-  ViajeBarato © 2026 · Hecho en Valencia 🍊 · <a href="mailto:hola@viajebarato.es">hola@viajebarato.es</a><br>
-  <em>Ejemplos ilustrativos — los precios reales llegan por email.</em>
-</footer>
+<script>
+function buscar(){
+  var o=document.getElementById('origen').value.trim().toUpperCase();
+  var d=document.getElementById('destino').value.trim().toUpperCase();
+  var f=document.getElementById('fecha').value;
+  var p=document.getElementById('pax').value;
+  if(!/^[A-Z]{3}$/.test(o)||!/^[A-Z]{3}$/.test(d)){alert('Origen y destino: códigos IATA de 3 letras (ej. VLC, PMI)');return}
+  if(!f){alert('Elige una fecha de salida');return}
+  var ymd=f.split('-');
+  var ddmm=ymd[2]+ymd[1];
+  var u=encodeURIComponent('https://www.aviasales.com/search/'+o+ddmm+d+p);
+  window.location.href='https://tp.media/r?marker=573638.web&u='+u+'&p=4114&campaign_id=100';
+}
+</script>
 </body>
 </html>
