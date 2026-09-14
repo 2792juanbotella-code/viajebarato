@@ -19,7 +19,7 @@ import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib.parse import urlencode
+from urllib.parse import quote, urlencode
 from urllib.request import Request, urlopen
 
 HERE = Path(__file__).parent
@@ -100,7 +100,8 @@ def cheapest_current(origin: str, destination: str) -> dict | None:
 # ---------- Layer 3: anomalías ----------
 def _db():
     DB.parent.mkdir(parents=True, exist_ok=True)
-    con = sqlite3.connect(DB)
+    con = sqlite3.connect(DB, timeout=30)  # espera locks (backfill/cron concurrentes)
+    con.execute("PRAGMA busy_timeout=30000")
     con.execute("""CREATE TABLE IF NOT EXISTS price_history (
         origin TEXT, destination TEXT, price REAL, seen_at TEXT,
         PRIMARY KEY (origin, destination, seen_at))""")
@@ -160,7 +161,8 @@ def find_deals(origins: list[str], max_dest: int = 12) -> list[dict]:
                 "deal": is_deal,
                 "departure_at": cur.get("departure_at"),
                 "link": "https://www.aviasales.com" + cur.get("link", ""),
-                "affiliate_link": (f"https://tp.media/r?marker={MARKER}&p=4114&u={cur.get('link', '')}"
+                # verificado en vivo 14-sep: u=<url completa de aviasales enc> → 200 aviasales (path solo → 400)
+                "affiliate_link": (f"https://tp.media/r?marker={MARKER}.web&u={quote('https://www.aviasales.com' + cur.get('link', ''), safe='')}&p=4114&campaign_id=100"
                                    if MARKER and cur.get("link") else None),
                 "ts": datetime.now(timezone.utc).isoformat(timespec="seconds"),
             })
