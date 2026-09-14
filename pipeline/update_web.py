@@ -4,6 +4,7 @@ Ejecutado por el cron diario tras el scan. Inserta el top-10 de rutas más
 baratas (o chollos si los hay) entre los marcadores DEALS_START/END.
 """
 import json
+import os
 import pathlib
 import re
 import subprocess
@@ -89,7 +90,14 @@ r = subprocess.run(["git", "add", "-A"],
 r = subprocess.run(["git", "commit", "-m", f"chollos {datetime.now():%Y-%m-%d}"],
                    cwd=ROOT, capture_output=True, text=True)
 if r.returncode == 0:
-    subprocess.run(["git", "push", "-q", "origin", "main"], cwd=ROOT, check=True)
+    # push portable: si hay proxy de egress (SSL_CERT_FILE), git-schannel no confía
+    # en sus leaf certs -> backend openssl + CA del proxy solo en ese caso
+    push = ["git", "push", "-q", "origin", "main"]
+    cafile = os.environ.get("SSL_CERT_FILE", "")
+    if cafile and os.path.exists(cafile):
+        push = ["git", "-c", "http.sslBackend=openssl",
+                "-c", f"http.sslCAInfo={cafile}", "push", "-q", "origin", "main"]
+    subprocess.run(push, cwd=ROOT, check=True)
     print(f"web actualizada: {len(rows)} rutas, push OK")
 else:
     print("nada que commitear:", r.stdout, r.stderr)
