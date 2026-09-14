@@ -1,7 +1,8 @@
 """Regenera la tabla de chollos en index.html desde scan_latest.json y hace push.
 
-Ejecutado por el cron diario tras el scan. Inserta el top-10 de rutas más
-baratas (o chollos si los hay) entre los marcadores DEALS_START/END.
+Ejecutado por el cron diario tras el scan. Inserta una selección multirregión
+equilibrada (chollos + hasta 6 mejores precios por región de España) entre
+los marcadores DEALS_START/END.
 """
 import json
 import os

@@ -103,15 +103,34 @@ def month_prices(origin: str, destination: str, month: str) -> list[dict]:
 
 
 def cheapest_current(origin: str, destination: str) -> dict | None:
-    """Precio más barato ahora mismo para la ruta (cualquier fecha)."""
+    """Mejor vuelo VIABLE ahora mismo: ≥MIN_HOURS_ADVANCE y ≤MAX_TRANSFERS.
+
+    Pide los 5 más baratos y devuelve el primero que pase los filtros: así
+    una ruta no desaparece del día porque su vuelo más barato salga en <48h
+    o tenga escalas absurdas (antes: limit=1 y la ruta se descartaba entera,
+    dejando huecos en la curva de precios).
+    """
     q = urlencode({
         "origin": origin, "destination": destination,
-        "currency": "eur", "sorting": "price", "limit": 1,
+        "currency": "eur", "sorting": "price", "limit": 5,
         "one_way": "true", "token": TOKEN,
     })
     d = _get(f"https://api.travelpayouts.com/aviasales/v3/prices_for_dates?{q}")
-    data = d.get("data") or []
-    return data[0] if data else None
+    now = time.time()
+    for fl in d.get("data") or []:
+        dep = fl.get("departure_at")
+        if dep:
+            try:
+                if datetime.fromisoformat(dep.replace("Z", "+00:00")).timestamp() \
+                        < now + MIN_HOURS_ADVANCE * 3600:
+                    continue
+            except ValueError:
+                pass
+        tr = fl.get("transfers")
+        if tr is not None and int(tr) > MAX_TRANSFERS:
+            continue
+        return fl
+    return None
 
 
 # ---------- Layer 3: anomalías ----------
