@@ -16,7 +16,7 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 
-from pipeline import _db, TOKEN  # reutiliza env + conexión
+from pipeline import _db, TOKEN, BLOCKLIST_DEST  # reutiliza env + conexión + blocklist
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
@@ -92,6 +92,8 @@ def main():
     total = 0
     # 1) pares curados primero
     for o, d in pairs:
+        if d in BLOCKLIST_DEST:
+            continue
         total += backfill_route(con, o, d, months)
         con.commit()
     # 2) orígenes: trending -> top destinos
@@ -104,6 +106,8 @@ def main():
             print(f"[{o}] trending falló: {e}")
             continue
         for dest in dests:
+            if dest in BLOCKLIST_DEST:
+                continue
             total += backfill_route(con, o, dest, months)
         con.commit()
         print(f"[{o}] +{total} filas acumuladas")

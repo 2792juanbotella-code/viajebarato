@@ -2,23 +2,6 @@
   "ts": "2026-09-14T18:29:19.804279+00:00",
   "deals": [
     {
-      "route": "MAD→MOW",
-      "origin": "MAD",
-      "destination": "MOW",
-      "price": 171,
-      "price_mean": 171.7,
-      "zscore": -0.41,
-      "n_obs": 7,
-      "deal": false,
-      "departure_at": "2026-09-16T13:30:00+02:00",
-      "airline": "VF",
-      "transfers": 2,
-      "duration_min": 625,
-      "link": "https://www.aviasales.com/search/MAD1609MOW1?t=DP17895654001789669200001670MADESBAYTVKO_5148c9af0d994523d1244b3c5bc02613_16640&search_date=14092026&expected_price_uuid=01a0a123-e80d-8050-a673-350a150de752&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=Iu2_sPWWO7xzyaE6Zi_WIw&expected_price_source=share&expected_price_currency=eur&expected_price=171",
-      "affiliate_link": "https://tp.media/r?marker=777254.web&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FMAD1609MOW1%3Ft%3DDP17895654001789669200001670MADESBAYTVKO_5148c9af0d994523d1244b3c5bc02613_16640%26search_date%3D14092026%26expected_price_uuid%3D01a0a123-e80d-8050-a673-350a150de752%26static_fare_key%3DTY%257CP1%257CH0%257CL0%257CCH0%257CR0%257CTBC0%26itinerary_key%3DIu2_sPWWO7xzyaE6Zi_WIw%26expected_price_source%3Dshare%26expected_price_currency%3Deur%26expected_price%3D171&p=4114&campaign_id=100",
-      "ts": "2026-09-14T18:24:15+00:00"
-    },
-    {
       "route": "MAD→LON",
       "origin": "MAD",
       "destination": "LON",
@@ -155,23 +138,6 @@
       "ts": "2026-09-14T18:24:22+00:00"
     },
     {
-      "route": "MAD→LED",
-      "origin": "MAD",
-      "destination": "LED",
-      "price": 173,
-      "price_mean": 173.0,
-      "zscore": null,
-      "n_obs": 7,
-      "deal": false,
-      "departure_at": "2027-03-02T12:40:00+01:00",
-      "airline": "PC",
-      "transfers": 1,
-      "duration_min": 475,
-      "link": "https://www.aviasales.com/search/MAD0203LED1?t=PC18039912001804037100000645MADSAWLED_4c5daabb8d7f538bb7341d9223d1f272_17371&search_date=08092026&expected_price_uuid=01a08026-a5ee-8051-2559-bfc73f86a7bf&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=Vds4pAGOafkWG1eIMBqk4Q&expected_price_source=share&expected_price_currency=eur&expected_price=173",
-      "affiliate_link": "https://tp.media/r?marker=777254.web&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FMAD0203LED1%3Ft%3DPC18039912001804037100000645MADSAWLED_4c5daabb8d7f538bb7341d9223d1f272_17371%26search_date%3D08092026%26expected_price_uuid%3D01a08026-a5ee-8051-2559-bfc73f86a7bf%26static_fare_key%3DTY%257CP1%257CH0%257CL0%257CCH0%257CR0%257CTBC0%26itinerary_key%3DVds4pAGOafkWG1eIMBqk4Q%26expected_price_source%3Dshare%26expected_price_currency%3Deur%26expected_price%3D173&p=4114&campaign_id=100",
-      "ts": "2026-09-14T18:24:23+00:00"
-    },
-    {
       "route": "MAD→IST",
       "origin": "MAD",
       "destination": "IST",
@@ -204,23 +170,6 @@
       "link": "https://www.aviasales.com/search/MAD3009BRU1?t=FR17908005001790808900000140MADCRL_6131d61bd55674fb8882a7c6d2a2fdee_2296&search_date=08092026&expected_price_uuid=01a082ce-edc4-8030-6ea5-1d23b90b622b&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=p_Kjwnf4fgBj2_pqS-a5dw&expected_price_source=share&expected_price_currency=eur&expected_price=23",
       "affiliate_link": "https://tp.media/r?marker=777254.web&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FMAD3009BRU1%3Ft%3DFR17908005001790808900000140MADCRL_6131d61bd55674fb8882a7c6d2a2fdee_2296%26search_date%3D08092026%26expected_price_uuid%3D01a082ce-edc4-8030-6ea5-1d23b90b622b%26static_fare_key%3DTY%257CP0%257CH0%257CL0%257CCH0%257CR0%257CTBC0%26itinerary_key%3Dp_Kjwnf4fgBj2_pqS-a5dw%26expected_price_source%3Dshare%26expected_price_currency%3Deur%26expected_price%3D23&p=4114&campaign_id=100",
       "ts": "2026-09-14T18:24:25+00:00"
-    },
-    {
-      "route": "BCN→MOW",
-      "origin": "BCN",
-      "destination": "MOW",
-      "price": 184,
-      "price_mean": 180.4,
-      "zscore": 2.55,
-      "n_obs": 7,
-      "deal": false,
-      "departure_at": "2026-11-14T14:10:00+01:00",
-      "airline": "PC",
-      "transfers": 1,
-      "duration_min": 450,
-      "link": "https://www.aviasales.com/search/BCN1411MOW1?t=PC17946654001794713100000675BCNADBVKO_37bd64973d137cb0461493dc468cece0_17886&search_date=14092026&expected_price_uuid=01a0a073-9123-8050-2b0c-2e3698e15c43&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=xb4HXziRme7DnP-QJ0vgew&expected_price_source=share&expected_price_currency=eur&expected_price=184",
-      "affiliate_link": "https://tp.media/r?marker=777254.web&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FBCN1411MOW1%3Ft%3DPC17946654001794713100000675BCNADBVKO_37bd64973d137cb0461493dc468cece0_17886%26search_date%3D14092026%26expected_price_uuid%3D01a0a073-9123-8050-2b0c-2e3698e15c43%26static_fare_key%3DTY%257CP1%257CH0%257CL0%257CCH0%257CR0%257CTBC0%26itinerary_key%3Dxb4HXziRme7DnP-QJ0vgew%26expected_price_source%3Dshare%26expected_price_currency%3Deur%26expected_price%3D184&p=4114&campaign_id=100",
-      "ts": "2026-09-14T18:24:26+00:00"
     },
     {
       "route": "BCN→PAR",
@@ -359,23 +308,6 @@
       "ts": "2026-09-14T18:24:33+00:00"
     },
     {
-      "route": "BCN→LED",
-      "origin": "BCN",
-      "destination": "LED",
-      "price": 152,
-      "price_mean": 152.1,
-      "zscore": -0.07,
-      "n_obs": 7,
-      "deal": false,
-      "departure_at": "2027-01-27T12:45:00+01:00",
-      "airline": "PC",
-      "transfers": 1,
-      "duration_min": 440,
-      "link": "https://www.aviasales.com/search/BCN2701LED1?t=PC18010539001801099500000640BCNSAWLED_39e92fb38808c3560ea0d0e8771a24c8_14816&search_date=14092026&expected_price_uuid=01a09fb8-bf78-8050-24dd-55da486a8870&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=ENQZAWtmRgTnwpv78GxOvQ&expected_price_source=share&expected_price_currency=eur&expected_price=152",
-      "affiliate_link": "https://tp.media/r?marker=777254.web&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FBCN2701LED1%3Ft%3DPC18010539001801099500000640BCNSAWLED_39e92fb38808c3560ea0d0e8771a24c8_14816%26search_date%3D14092026%26expected_price_uuid%3D01a09fb8-bf78-8050-24dd-55da486a8870%26static_fare_key%3DTY%257CP1%257CH0%257CL0%257CCH0%257CR0%257CTBC0%26itinerary_key%3DENQZAWtmRgTnwpv78GxOvQ%26expected_price_source%3Dshare%26expected_price_currency%3Deur%26expected_price%3D152&p=4114&campaign_id=100",
-      "ts": "2026-09-14T18:24:34+00:00"
-    },
-    {
       "route": "BCN→LIS",
       "origin": "BCN",
       "destination": "LIS",
@@ -476,23 +408,6 @@
       "link": "https://www.aviasales.com/search/VLC2212CGN1?t=EW17979192001797941700000375VLCPMICGN_172ba56bf4d4c9f37cc179aea2f6eb28_4297&search_date=13092026&expected_price_uuid=01a09a7a-c978-8030-e0d6-e7be93c2a3ca&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=dCKFSdQpdYQxTXQrSZ2YFQ&expected_price_source=share&expected_price_currency=eur&expected_price=44",
       "affiliate_link": "https://tp.media/r?marker=777254.web&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FVLC2212CGN1%3Ft%3DEW17979192001797941700000375VLCPMICGN_172ba56bf4d4c9f37cc179aea2f6eb28_4297%26search_date%3D13092026%26expected_price_uuid%3D01a09a7a-c978-8030-e0d6-e7be93c2a3ca%26static_fare_key%3DTY%257CP0%257CH0%257CL0%257CCH0%257CR0%257CTBC0%26itinerary_key%3DdCKFSdQpdYQxTXQrSZ2YFQ%26expected_price_source%3Dshare%26expected_price_currency%3Deur%26expected_price%3D44&p=4114&campaign_id=100",
       "ts": "2026-09-14T18:24:40+00:00"
-    },
-    {
-      "route": "VLC→MOW",
-      "origin": "VLC",
-      "destination": "MOW",
-      "price": 165,
-      "price_mean": 170.4,
-      "zscore": -0.58,
-      "n_obs": 8,
-      "deal": false,
-      "departure_at": "2026-11-20T16:55:00+01:00",
-      "airline": "V7",
-      "transfers": 2,
-      "duration_min": 565,
-      "link": "https://www.aviasales.com/search/VLC2011MOW1?t=PC17951937001795313100001870VLCBIOSAWVKO_ac3beba0b5ce955f10038a222c66824c_15945&search_date=14092026&expected_price_uuid=01a09f33-1ecb-8030-a0de-4247bd32fe95&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=pUNm6ohyPWM_0uBZhTNvgA&expected_price_source=share&expected_price_currency=eur&expected_price=165",
-      "affiliate_link": "https://tp.media/r?marker=777254.web&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FVLC2011MOW1%3Ft%3DPC17951937001795313100001870VLCBIOSAWVKO_ac3beba0b5ce955f10038a222c66824c_15945%26search_date%3D14092026%26expected_price_uuid%3D01a09f33-1ecb-8030-a0de-4247bd32fe95%26static_fare_key%3DTY%257CP1%257CH0%257CL0%257CCH0%257CR0%257CTBC0%26itinerary_key%3DpUNm6ohyPWM_0uBZhTNvgA%26expected_price_source%3Dshare%26expected_price_currency%3Deur%26expected_price%3D165&p=4114&campaign_id=100",
-      "ts": "2026-09-14T18:24:41+00:00"
     },
     {
       "route": "VLC→ROM",
@@ -631,23 +546,6 @@
       "ts": "2026-09-14T18:24:49+00:00"
     },
     {
-      "route": "ALC→MOW",
-      "origin": "ALC",
-      "destination": "MOW",
-      "price": 167,
-      "price_mean": 167.0,
-      "zscore": null,
-      "n_obs": 6,
-      "deal": false,
-      "departure_at": "2026-09-15T12:35:00+02:00",
-      "airline": "LS",
-      "transfers": 2,
-      "duration_min": 685,
-      "link": "https://www.aviasales.com/search/ALC1509MOW1?t=DP17894757001789582800001725ALCSTNAYTVKO_73aa9566af70f0898dc845904bcca19a_16253&search_date=14092026&expected_price_uuid=01a0a116-46b2-8050-a731-acd08e239eff&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=RHgnTvJs_RAVObVwfPi-xg&expected_price_source=share&expected_price_currency=eur&expected_price=167",
-      "affiliate_link": "https://tp.media/r?marker=777254.web&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FALC1509MOW1%3Ft%3DDP17894757001789582800001725ALCSTNAYTVKO_73aa9566af70f0898dc845904bcca19a_16253%26search_date%3D14092026%26expected_price_uuid%3D01a0a116-46b2-8050-a731-acd08e239eff%26static_fare_key%3DTY%257CP1%257CH0%257CL0%257CCH0%257CR0%257CTBC0%26itinerary_key%3DRHgnTvJs_RAVObVwfPi-xg%26expected_price_source%3Dshare%26expected_price_currency%3Deur%26expected_price%3D167&p=4114&campaign_id=100",
-      "ts": "2026-09-14T18:24:50+00:00"
-    },
-    {
       "route": "ALC→DUS",
       "origin": "ALC",
       "destination": "DUS",
@@ -765,23 +663,6 @@
       "link": "https://www.aviasales.com/search/ALC2110BCN1?t=VY17926140001792618500000075ALCBCN_b6c3dacb3fa75dba581feb6dd15fc3c9_2396&search_date=14092026&expected_price_uuid=01a0a0d8-5fcb-8050-a4aa-9ab5ecb9f7c5&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=VDwd5eVepeQ5djuxQLtUZA&expected_price_source=share&expected_price_currency=eur&expected_price=25",
       "affiliate_link": "https://tp.media/r?marker=777254.web&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FALC2110BCN1%3Ft%3DVY17926140001792618500000075ALCBCN_b6c3dacb3fa75dba581feb6dd15fc3c9_2396%26search_date%3D14092026%26expected_price_uuid%3D01a0a0d8-5fcb-8050-a4aa-9ab5ecb9f7c5%26static_fare_key%3DTY%257CP1%257CH0%257CL0%257CCH0%257CR0%257CTBC0%26itinerary_key%3DVDwd5eVepeQ5djuxQLtUZA%26expected_price_source%3Dshare%26expected_price_currency%3Deur%26expected_price%3D25&p=4114&campaign_id=100",
       "ts": "2026-09-14T18:24:57+00:00"
-    },
-    {
-      "route": "ALC→LED",
-      "origin": "ALC",
-      "destination": "LED",
-      "price": 145,
-      "price_mean": 146.0,
-      "zscore": null,
-      "n_obs": 6,
-      "deal": false,
-      "departure_at": "2026-11-20T13:55:00+01:00",
-      "airline": "V7",
-      "transfers": 2,
-      "duration_min": 555,
-      "link": "https://www.aviasales.com/search/ALC2011LED1?t=PC17951829001795310700002010ALCBIOSAWLED_2ecafdff4d17fb584685aead499fe23b_14112&search_date=14092026&expected_price_uuid=01a0a0ad-1abf-8050-2471-758b8096abf7&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=bIDK7vpP2fJiAdZVnndSGA&expected_price_source=share&expected_price_currency=eur&expected_price=145",
-      "affiliate_link": "https://tp.media/r?marker=777254.web&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FALC2011LED1%3Ft%3DPC17951829001795310700002010ALCBIOSAWLED_2ecafdff4d17fb584685aead499fe23b_14112%26search_date%3D14092026%26expected_price_uuid%3D01a0a0ad-1abf-8050-2471-758b8096abf7%26static_fare_key%3DTY%257CP1%257CH0%257CL0%257CCH0%257CR0%257CTBC0%26itinerary_key%3DbIDK7vpP2fJiAdZVnndSGA%26expected_price_source%3Dshare%26expected_price_currency%3Deur%26expected_price%3D145&p=4114&campaign_id=100",
-      "ts": "2026-09-14T18:24:58+00:00"
     },
     {
       "route": "ALC→EIN",
@@ -1141,23 +1022,6 @@
       "ts": "2026-09-14T18:25:20+00:00"
     },
     {
-      "route": "IBZ→MOW",
-      "origin": "IBZ",
-      "destination": "MOW",
-      "price": 214,
-      "price_mean": 214.0,
-      "zscore": null,
-      "n_obs": 6,
-      "deal": false,
-      "departure_at": "2026-11-18T18:10:00+01:00",
-      "airline": "VY",
-      "transfers": 3,
-      "duration_min": 625,
-      "link": "https://www.aviasales.com/search/IBZ1811MOW1?t=PC17950254001795140300001795IBZBCNBIOSAWVKO_3287da7b9b00cdd10c18fcb714ec0058_20921&search_date=12092026&expected_price_uuid=01a09701-fa16-8030-28ae-29f10e38a666&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=qj-fQ2xH-15chxzjnUGapw&expected_price_source=share&expected_price_currency=eur&expected_price=214",
-      "affiliate_link": "https://tp.media/r?marker=777254.web&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FIBZ1811MOW1%3Ft%3DPC17950254001795140300001795IBZBCNBIOSAWVKO_3287da7b9b00cdd10c18fcb714ec0058_20921%26search_date%3D12092026%26expected_price_uuid%3D01a09701-fa16-8030-28ae-29f10e38a666%26static_fare_key%3DTY%257CP0%257CH0%257CL0%257CCH0%257CR0%257CTBC0%26itinerary_key%3Dqj-fQ2xH-15chxzjnUGapw%26expected_price_source%3Dshare%26expected_price_currency%3Deur%26expected_price%3D214&p=4114&campaign_id=100",
-      "ts": "2026-09-14T18:25:21+00:00"
-    },
-    {
       "route": "IBZ→BIO",
       "origin": "IBZ",
       "destination": "BIO",
@@ -1362,23 +1226,6 @@
       "ts": "2026-09-14T18:25:35+00:00"
     },
     {
-      "route": "AGP→MOW",
-      "origin": "AGP",
-      "destination": "MOW",
-      "price": 147,
-      "price_mean": 147.0,
-      "zscore": null,
-      "n_obs": 6,
-      "deal": false,
-      "departure_at": "2026-11-21T06:45:00+01:00",
-      "airline": "VY",
-      "transfers": 2,
-      "duration_min": 580,
-      "link": "https://www.aviasales.com/search/AGP2111MOW1?t=PC17952435001795313100001040AGPBIOSAWVKO_fe4d77f2bf2651d88deb5d4c1e3d052f_14380&search_date=12092026&expected_price_uuid=01a096af-f58e-8030-6a09-3d640b3860f3&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=beL8ekLhmvHn1xbHmJLGZA&expected_price_source=share&expected_price_currency=eur&expected_price=147",
-      "affiliate_link": "https://tp.media/r?marker=777254.web&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FAGP2111MOW1%3Ft%3DPC17952435001795313100001040AGPBIOSAWVKO_fe4d77f2bf2651d88deb5d4c1e3d052f_14380%26search_date%3D12092026%26expected_price_uuid%3D01a096af-f58e-8030-6a09-3d640b3860f3%26static_fare_key%3DTY%257CP1%257CH0%257CL0%257CCH0%257CR0%257CTBC0%26itinerary_key%3DbeL8ekLhmvHn1xbHmJLGZA%26expected_price_source%3Dshare%26expected_price_currency%3Deur%26expected_price%3D147&p=4114&campaign_id=100",
-      "ts": "2026-09-14T18:25:36+00:00"
-    },
-    {
       "route": "AGP→BIO",
       "origin": "AGP",
       "destination": "BIO",
@@ -1564,23 +1411,6 @@
       "link": "https://www.aviasales.com/search/SVQ2412MIL1?t=U217981445001798153500000150SVQMXP_c5896721fd1f034581e984b0fa2fec9b_1547&search_date=08092026&expected_price_uuid=01a081ca-4573-8030-6045-0717a86752bf&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=PuFWoG_PlXWU0IQovp6yXA&expected_price_source=share&expected_price_currency=eur&expected_price=16",
       "affiliate_link": "https://tp.media/r?marker=777254.web&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FSVQ2412MIL1%3Ft%3DU217981445001798153500000150SVQMXP_c5896721fd1f034581e984b0fa2fec9b_1547%26search_date%3D08092026%26expected_price_uuid%3D01a081ca-4573-8030-6045-0717a86752bf%26static_fare_key%3DTY%257CP0%257CH0%257CL0%257CCH0%257CR0%257CTBC0%26itinerary_key%3DPuFWoG_PlXWU0IQovp6yXA%26expected_price_source%3Dshare%26expected_price_currency%3Deur%26expected_price%3D16&p=4114&campaign_id=100",
       "ts": "2026-09-14T18:25:47+00:00"
-    },
-    {
-      "route": "SVQ→MOW",
-      "origin": "SVQ",
-      "destination": "MOW",
-      "price": 149,
-      "price_mean": 149.0,
-      "zscore": null,
-      "n_obs": 6,
-      "deal": false,
-      "departure_at": "2026-11-20T20:50:00+01:00",
-      "airline": "V7",
-      "transfers": 2,
-      "duration_min": 570,
-      "link": "https://www.aviasales.com/search/SVQ2011MOW1?t=PC17952078001795313100001635SVQBIOSAWVKO_0ed75d40d146e27941bb1b88f25120ec_14553&search_date=12092026&expected_price_uuid=01a096b3-427f-8030-2a4c-7a55237502fd&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=rA0O9-JIzsQyH1CtCEicTQ&expected_price_source=share&expected_price_currency=eur&expected_price=149",
-      "affiliate_link": "https://tp.media/r?marker=777254.web&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FSVQ2011MOW1%3Ft%3DPC17952078001795313100001635SVQBIOSAWVKO_0ed75d40d146e27941bb1b88f25120ec_14553%26search_date%3D12092026%26expected_price_uuid%3D01a096b3-427f-8030-2a4c-7a55237502fd%26static_fare_key%3DTY%257CP1%257CH0%257CL0%257CCH0%257CR0%257CTBC0%26itinerary_key%3DrA0O9-JIzsQyH1CtCEicTQ%26expected_price_source%3Dshare%26expected_price_currency%3Deur%26expected_price%3D149&p=4114&campaign_id=100",
-      "ts": "2026-09-14T18:25:48+00:00"
     },
     {
       "route": "SVQ→ROM",
@@ -1836,23 +1666,6 @@
       "link": "https://www.aviasales.com/search/BIO1011LON1?t=W917943315001794335100000120BIOLTN_f21bfd4d65c850e1397688431bb689af_1564&search_date=13092026&expected_price_uuid=01a09a17-7c50-8030-223a-7d298423f25e&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=1LoDPqoPT2E7hHLN_ZrN9A&expected_price_source=share&expected_price_currency=eur&expected_price=16",
       "affiliate_link": "https://tp.media/r?marker=777254.web&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FBIO1011LON1%3Ft%3DW917943315001794335100000120BIOLTN_f21bfd4d65c850e1397688431bb689af_1564%26search_date%3D13092026%26expected_price_uuid%3D01a09a17-7c50-8030-223a-7d298423f25e%26static_fare_key%3DTY%257CP0%257CH0%257CL0%257CCH0%257CR0%257CTBC0%26itinerary_key%3D1LoDPqoPT2E7hHLN_ZrN9A%26expected_price_source%3Dshare%26expected_price_currency%3Deur%26expected_price%3D16&p=4114&campaign_id=100",
       "ts": "2026-09-14T18:26:03+00:00"
-    },
-    {
-      "route": "BIO→MOW",
-      "origin": "BIO",
-      "destination": "MOW",
-      "price": 114,
-      "price_mean": 114.0,
-      "zscore": null,
-      "n_obs": 6,
-      "deal": false,
-      "departure_at": "2026-11-21T14:00:00+01:00",
-      "airline": "PC",
-      "transfers": 1,
-      "duration_min": 485,
-      "link": "https://www.aviasales.com/search/BIO2111MOW1?t=PC17952696001795313100000605BIOSAWVKO_b348ed6cacb30e42066c23057c8d3e36_11168&search_date=13092026&expected_price_uuid=01a09918-9ff3-8050-2994-db661d81e503&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=shuOIqOf_pp80A2GYmdFrg&expected_price_source=share&expected_price_currency=eur&expected_price=114",
-      "affiliate_link": "https://tp.media/r?marker=777254.web&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FBIO2111MOW1%3Ft%3DPC17952696001795313100000605BIOSAWVKO_b348ed6cacb30e42066c23057c8d3e36_11168%26search_date%3D13092026%26expected_price_uuid%3D01a09918-9ff3-8050-2994-db661d81e503%26static_fare_key%3DTY%257CP1%257CH0%257CL0%257CCH0%257CR0%257CTBC0%26itinerary_key%3DshuOIqOf_pp80A2GYmdFrg%26expected_price_source%3Dshare%26expected_price_currency%3Deur%26expected_price%3D114&p=4114&campaign_id=100",
-      "ts": "2026-09-14T18:26:04+00:00"
     },
     {
       "route": "BIO→BER",
@@ -2246,23 +2059,6 @@
       "ts": "2026-09-14T18:26:27+00:00"
     },
     {
-      "route": "OVD→MOW",
-      "origin": "OVD",
-      "destination": "MOW",
-      "price": 212,
-      "price_mean": 212.0,
-      "zscore": null,
-      "n_obs": 6,
-      "deal": false,
-      "departure_at": "2026-10-17T14:00:00+02:00",
-      "airline": "V7",
-      "transfers": 2,
-      "duration_min": 590,
-      "link": "https://www.aviasales.com/search/OVD1710MOW1?t=PC17922456001792386300002285OVDSVQSAWVKO_3820baa1af5aa9dfec7971cbc431f127_21151&search_date=07092026&expected_price_uuid=01a07dc3-dd14-8050-6a3f-a0feb10aab0d&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=RRhpcQqzlmxTir9rv18fIA&expected_price_source=share&expected_price_currency=eur&expected_price=212",
-      "affiliate_link": "https://tp.media/r?marker=777254.web&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FOVD1710MOW1%3Ft%3DPC17922456001792386300002285OVDSVQSAWVKO_3820baa1af5aa9dfec7971cbc431f127_21151%26search_date%3D07092026%26expected_price_uuid%3D01a07dc3-dd14-8050-6a3f-a0feb10aab0d%26static_fare_key%3DTY%257CP1%257CH0%257CL0%257CCH0%257CR0%257CTBC0%26itinerary_key%3DRRhpcQqzlmxTir9rv18fIA%26expected_price_source%3Dshare%26expected_price_currency%3Deur%26expected_price%3D212&p=4114&campaign_id=100",
-      "ts": "2026-09-14T18:26:28+00:00"
-    },
-    {
       "route": "OVD→LON",
       "origin": "OVD",
       "destination": "LON",
@@ -2467,23 +2263,6 @@
       "ts": "2026-09-14T18:26:41+00:00"
     },
     {
-      "route": "LCG→MOW",
-      "origin": "LCG",
-      "destination": "MOW",
-      "price": 279,
-      "price_mean": 279.0,
-      "zscore": null,
-      "n_obs": 6,
-      "deal": false,
-      "departure_at": "2026-09-15T14:20:00+02:00",
-      "airline": "EC",
-      "transfers": 2,
-      "duration_min": 570,
-      "link": "https://www.aviasales.com/search/LCG1509MOW1?t=3F17894820001789632600002450LCGMXPBGYEVNVKO_3870706d58d65e65ca042ba1ec9718c3_27937&search_date=08092026&expected_price_uuid=01a080f6-b60d-8050-2f61-0591904ccb5c&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=z18ti2KsU9M9-Em2qCFqbg&expected_price_source=share&expected_price_currency=eur&expected_price=279",
-      "affiliate_link": "https://tp.media/r?marker=777254.web&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FLCG1509MOW1%3Ft%3D3F17894820001789632600002450LCGMXPBGYEVNVKO_3870706d58d65e65ca042ba1ec9718c3_27937%26search_date%3D08092026%26expected_price_uuid%3D01a080f6-b60d-8050-2f61-0591904ccb5c%26static_fare_key%3DTY%257CP1%257CH0%257CL0%257CCH0%257CR0%257CTBC0%26itinerary_key%3Dz18ti2KsU9M9-Em2qCFqbg%26expected_price_source%3Dshare%26expected_price_currency%3Deur%26expected_price%3D279&p=4114&campaign_id=100",
-      "ts": "2026-09-14T18:26:42+00:00"
-    },
-    {
       "route": "LCG→IST",
       "origin": "LCG",
       "destination": "IST",
@@ -2671,23 +2450,6 @@
       "ts": "2026-09-14T18:26:56+00:00"
     },
     {
-      "route": "VGO→MOW",
-      "origin": "VGO",
-      "destination": "MOW",
-      "price": 253,
-      "price_mean": 253.0,
-      "zscore": null,
-      "n_obs": 6,
-      "deal": false,
-      "departure_at": "2026-10-04T21:05:00+02:00",
-      "airline": "UX",
-      "transfers": 3,
-      "duration_min": 645,
-      "link": "https://www.aviasales.com/search/VGO0410MOW1?t=PC17911479001791263100001860VGOMADSVQSAWVKO_9a4381fca278531bd60182bc7c7115ce_25086&search_date=09092026&expected_price_uuid=01a086d6-fc5f-8050-620b-8e9841002536&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=HdPzq4PbylFDxp77QWZV0Q&expected_price_source=share&expected_price_currency=eur&expected_price=253",
-      "affiliate_link": "https://tp.media/r?marker=777254.web&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FVGO0410MOW1%3Ft%3DPC17911479001791263100001860VGOMADSVQSAWVKO_9a4381fca278531bd60182bc7c7115ce_25086%26search_date%3D09092026%26expected_price_uuid%3D01a086d6-fc5f-8050-620b-8e9841002536%26static_fare_key%3DTY%257CP1%257CH0%257CL0%257CCH0%257CR0%257CTBC0%26itinerary_key%3DHdPzq4PbylFDxp77QWZV0Q%26expected_price_source%3Dshare%26expected_price_currency%3Deur%26expected_price%3D253&p=4114&campaign_id=100",
-      "ts": "2026-09-14T18:26:57+00:00"
-    },
-    {
       "route": "ZAZ→ROM",
       "origin": "ZAZ",
       "destination": "ROM",
@@ -2788,23 +2550,6 @@
       "link": "https://www.aviasales.com/search/ZAZ2709IST1?t=JU17904954001790566800001130ZAZPMIBEGIST_621c288277198e82d74da54f1bc30bbe_17176&search_date=10092026&expected_price_uuid=01a08bad-be3e-8030-ad89-8e36e616653c&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=7Nu7XY_tUO2yXJAWGfeA6Q&expected_price_source=share&expected_price_currency=eur&expected_price=176",
       "affiliate_link": "https://tp.media/r?marker=777254.web&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FZAZ2709IST1%3Ft%3DJU17904954001790566800001130ZAZPMIBEGIST_621c288277198e82d74da54f1bc30bbe_17176%26search_date%3D10092026%26expected_price_uuid%3D01a08bad-be3e-8030-ad89-8e36e616653c%26static_fare_key%3DTY%257CP1%257CH0%257CL0%257CCH0%257CR0%257CTBC0%26itinerary_key%3D7Nu7XY_tUO2yXJAWGfeA6Q%26expected_price_source%3Dshare%26expected_price_currency%3Deur%26expected_price%3D176&p=4114&campaign_id=100",
       "ts": "2026-09-14T18:27:04+00:00"
-    },
-    {
-      "route": "ZAZ→LED",
-      "origin": "ZAZ",
-      "destination": "LED",
-      "price": 234,
-      "price_mean": 234.0,
-      "zscore": null,
-      "n_obs": 6,
-      "deal": false,
-      "departure_at": "2026-11-14T16:30:00+01:00",
-      "airline": "W4",
-      "transfers": 2,
-      "duration_min": 500,
-      "link": "https://www.aviasales.com/search/ZAZ1411LED1?t=PC17946738001794878700003295ZAZFCOSAWLED_71ef5c83f391a15dbf9014872a181281_22888&search_date=13092026&expected_price_uuid=01a09a16-e931-8030-617f-ca3ba61ad0db&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=u5rifAiZy3ZnLyvQ5I3pfQ&expected_price_source=share&expected_price_currency=eur&expected_price=234",
-      "affiliate_link": "https://tp.media/r?marker=777254.web&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FZAZ1411LED1%3Ft%3DPC17946738001794878700003295ZAZFCOSAWLED_71ef5c83f391a15dbf9014872a181281_22888%26search_date%3D13092026%26expected_price_uuid%3D01a09a16-e931-8030-617f-ca3ba61ad0db%26static_fare_key%3DTY%257CP0%257CH0%257CL0%257CCH0%257CR0%257CTBC0%26itinerary_key%3Du5rifAiZy3ZnLyvQ5I3pfQ%26expected_price_source%3Dshare%26expected_price_currency%3Deur%26expected_price%3D234&p=4114&campaign_id=100",
-      "ts": "2026-09-14T18:27:05+00:00"
     },
     {
       "route": "ZAZ→LIS",
@@ -2941,23 +2686,6 @@
       "link": "https://www.aviasales.com/search/GRX2209MAD1?t=IB17901132001790117400000070GRXMAD_400bf2638339d9bd2daa95e54c35c7d0_2104&search_date=12092026&expected_price_uuid=01a09774-37c8-8030-2211-ded231beb390&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH1%7CR0%7CTBC0&itinerary_key=-bUEk7g2fgY7TVWAhdubjw&expected_price_source=share&expected_price_currency=eur&expected_price=22",
       "affiliate_link": "https://tp.media/r?marker=777254.web&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FGRX2209MAD1%3Ft%3DIB17901132001790117400000070GRXMAD_400bf2638339d9bd2daa95e54c35c7d0_2104%26search_date%3D12092026%26expected_price_uuid%3D01a09774-37c8-8030-2211-ded231beb390%26static_fare_key%3DTY%257CP0%257CH1%257CL0%257CCH1%257CR0%257CTBC0%26itinerary_key%3D-bUEk7g2fgY7TVWAhdubjw%26expected_price_source%3Dshare%26expected_price_currency%3Deur%26expected_price%3D22&p=4114&campaign_id=100",
       "ts": "2026-09-14T18:27:15+00:00"
-    },
-    {
-      "route": "GRX→MOW",
-      "origin": "GRX",
-      "destination": "MOW",
-      "price": 302,
-      "price_mean": 302.0,
-      "zscore": null,
-      "n_obs": 6,
-      "deal": false,
-      "departure_at": "2026-11-11T10:50:00+01:00",
-      "airline": "VY",
-      "transfers": 3,
-      "duration_min": 620,
-      "link": "https://www.aviasales.com/search/GRX1111MOW1?t=W417943942001794528600002120GRXBCNMXPEVNVKO_834df8fcaec2b3461383139aeab27e03_30000&search_date=09092026&expected_price_uuid=01a085cd-4aaa-8050-aa65-eafc6c352eaa&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=FIVExZ82qHGrqJiFo47lpw&expected_price_source=share&expected_price_currency=eur&expected_price=302",
-      "affiliate_link": "https://tp.media/r?marker=777254.web&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FGRX1111MOW1%3Ft%3DW417943942001794528600002120GRXBCNMXPEVNVKO_834df8fcaec2b3461383139aeab27e03_30000%26search_date%3D09092026%26expected_price_uuid%3D01a085cd-4aaa-8050-aa65-eafc6c352eaa%26static_fare_key%3DTY%257CP1%257CH0%257CL0%257CCH0%257CR0%257CTBC0%26itinerary_key%3DFIVExZ82qHGrqJiFo47lpw%26expected_price_source%3Dshare%26expected_price_currency%3Deur%26expected_price%3D302&p=4114&campaign_id=100",
-      "ts": "2026-09-14T18:27:16+00:00"
     },
     {
       "route": "GRX→BER",
@@ -3111,23 +2839,6 @@
       "link": "https://www.aviasales.com/search/LEI1610DXB1?t=VF17921865001792288500001580LEIMADVIESAWDXB_c573244929c028f516d44bf572548036_28964&search_date=14092026&expected_price_uuid=01a09eff-9e5d-8030-2432-d839938d59d0&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=7l41KBZW9y2iW1aCYDf1Xg&expected_price_source=share&expected_price_currency=eur&expected_price=298",
       "affiliate_link": "https://tp.media/r?marker=777254.web&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FLEI1610DXB1%3Ft%3DVF17921865001792288500001580LEIMADVIESAWDXB_c573244929c028f516d44bf572548036_28964%26search_date%3D14092026%26expected_price_uuid%3D01a09eff-9e5d-8030-2432-d839938d59d0%26static_fare_key%3DTY%257CP0%257CH0%257CL0%257CCH0%257CR0%257CTBC0%26itinerary_key%3D7l41KBZW9y2iW1aCYDf1Xg%26expected_price_source%3Dshare%26expected_price_currency%3Deur%26expected_price%3D298&p=4114&campaign_id=100",
       "ts": "2026-09-14T18:27:31+00:00"
-    },
-    {
-      "route": "LEI→LED",
-      "origin": "LEI",
-      "destination": "LED",
-      "price": 264,
-      "price_mean": 264.0,
-      "zscore": null,
-      "n_obs": 6,
-      "deal": false,
-      "departure_at": "2026-09-15T11:00:00+02:00",
-      "airline": "U2",
-      "transfers": 2,
-      "duration_min": 605,
-      "link": "https://www.aviasales.com/search/LEI1509LED1?t=PC17894700001789566900001555LEISENSTNSAWLED_1d8d3b4b827d741ad4043bf61863b646_25630&search_date=14092026&expected_price_uuid=01a09ecb-e276-8030-64b3-ecc18a192ee1&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=fXLNfwTAef3ah0rOStRnnA&expected_price_source=share&expected_price_currency=eur&expected_price=264",
-      "affiliate_link": "https://tp.media/r?marker=777254.web&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FLEI1509LED1%3Ft%3DPC17894700001789566900001555LEISENSTNSAWLED_1d8d3b4b827d741ad4043bf61863b646_25630%26search_date%3D14092026%26expected_price_uuid%3D01a09ecb-e276-8030-64b3-ecc18a192ee1%26static_fare_key%3DTY%257CP1%257CH0%257CL0%257CCH0%257CR0%257CTBC0%26itinerary_key%3DfXLNfwTAef3ah0rOStRnnA%26expected_price_source%3Dshare%26expected_price_currency%3Deur%26expected_price%3D264&p=4114&campaign_id=100",
-      "ts": "2026-09-14T18:27:32+00:00"
     },
     {
       "route": "LEI→LIS",
@@ -3793,23 +3504,6 @@
       "ts": "2026-09-14T18:28:14+00:00"
     },
     {
-      "route": "TFN→MOW",
-      "origin": "TFN",
-      "destination": "MOW",
-      "price": 217,
-      "price_mean": 217.0,
-      "zscore": null,
-      "n_obs": 6,
-      "deal": false,
-      "departure_at": "2026-11-22T06:55:00Z",
-      "airline": "VY",
-      "transfers": 2,
-      "duration_min": 675,
-      "link": "https://www.aviasales.com/search/TFN2211MOW1?t=PC17953305001795485900002410TFNBIOSAWVKO_5e18e814abeff59d10d55841fc3fd4b2_21187&search_date=12092026&expected_price_uuid=01a09511-55d4-8050-a6cd-7ad1e8042aad&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=G8W4t4-l4wKG8kc7ktfkgQ&origin_airports=0&expected_price_source=share&expected_price_currency=eur&expected_price=217",
-      "affiliate_link": "https://tp.media/r?marker=777254.web&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTFN2211MOW1%3Ft%3DPC17953305001795485900002410TFNBIOSAWVKO_5e18e814abeff59d10d55841fc3fd4b2_21187%26search_date%3D12092026%26expected_price_uuid%3D01a09511-55d4-8050-a6cd-7ad1e8042aad%26static_fare_key%3DTY%257CP1%257CH0%257CL0%257CCH0%257CR0%257CTBC0%26itinerary_key%3DG8W4t4-l4wKG8kc7ktfkgQ%26origin_airports%3D0%26expected_price_source%3Dshare%26expected_price_currency%3Deur%26expected_price%3D217&p=4114&campaign_id=100",
-      "ts": "2026-09-14T18:28:15+00:00"
-    },
-    {
       "route": "TFN→AGP",
       "origin": "TFN",
       "destination": "AGP",
@@ -3963,23 +3657,6 @@
       "ts": "2026-09-14T18:28:23+00:00"
     },
     {
-      "route": "TFN→LED",
-      "origin": "TFN",
-      "destination": "LED",
-      "price": 209,
-      "price_mean": 209.0,
-      "zscore": null,
-      "n_obs": 6,
-      "deal": false,
-      "departure_at": "2026-12-02T13:20:00Z",
-      "airline": "VY",
-      "transfers": 2,
-      "duration_min": 625,
-      "link": "https://www.aviasales.com/search/TFN0212LED1?t=PC17962176001796347500001985TFNSVQSAWLED_75707816d6c09c13d588dfabf93755e2_20369&search_date=14092026&expected_price_uuid=01a09e84-28b5-8050-e856-7503f77da6f7&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=eDI_bv8IfihFqgL85nQ5kA&origin_airports=0&expected_price_source=share&expected_price_currency=eur&expected_price=209",
-      "affiliate_link": "https://tp.media/r?marker=777254.web&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTFN0212LED1%3Ft%3DPC17962176001796347500001985TFNSVQSAWLED_75707816d6c09c13d588dfabf93755e2_20369%26search_date%3D14092026%26expected_price_uuid%3D01a09e84-28b5-8050-e856-7503f77da6f7%26static_fare_key%3DTY%257CP1%257CH0%257CL0%257CCH0%257CR0%257CTBC0%26itinerary_key%3DeDI_bv8IfihFqgL85nQ5kA%26origin_airports%3D0%26expected_price_source%3Dshare%26expected_price_currency%3Deur%26expected_price%3D209&p=4114&campaign_id=100",
-      "ts": "2026-09-14T18:28:24+00:00"
-    },
-    {
       "route": "TFS→MAD",
       "origin": "TFS",
       "destination": "MAD",
@@ -3995,23 +3672,6 @@
       "link": "https://www.aviasales.com/search/TFS1711MAD1?t=NT17949282001794955500000395TFSLPAMAD_134570aba91c5d1e0571e1b0328fbe10_3488&search_date=11092026&expected_price_uuid=01a08ee4-3df8-8030-e2d3-805d11949e8a&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=lICpD1eTT4YxVa3jt5P0aQ&origin_airports=0&expected_price_source=share&expected_price_currency=eur&expected_price=36",
       "affiliate_link": "https://tp.media/r?marker=777254.web&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTFS1711MAD1%3Ft%3DNT17949282001794955500000395TFSLPAMAD_134570aba91c5d1e0571e1b0328fbe10_3488%26search_date%3D11092026%26expected_price_uuid%3D01a08ee4-3df8-8030-e2d3-805d11949e8a%26static_fare_key%3DTY%257CP1%257CH0%257CL0%257CCH0%257CR0%257CTBC0%26itinerary_key%3DlICpD1eTT4YxVa3jt5P0aQ%26origin_airports%3D0%26expected_price_source%3Dshare%26expected_price_currency%3Deur%26expected_price%3D36&p=4114&campaign_id=100",
       "ts": "2026-09-14T18:28:25+00:00"
-    },
-    {
-      "route": "TFS→MOW",
-      "origin": "TFS",
-      "destination": "MOW",
-      "price": 205,
-      "price_mean": 205.0,
-      "zscore": null,
-      "n_obs": 6,
-      "deal": false,
-      "departure_at": "2026-12-09T19:25:00Z",
-      "airline": "U2",
-      "transfers": 2,
-      "duration_min": 795,
-      "link": "https://www.aviasales.com/search/TFS0912MOW1?t=PC17968443001796958300001720TFSLTNLGWAYTVKO_383e5d22a0e979ffe7f9bf03ce56e61b_19972&search_date=12092026&expected_price_uuid=01a095cb-13bd-8050-e56b-84b4274076f0&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=RP4aCBf6fJJsK4rv35QEpA&origin_airports=0&expected_price_source=share&expected_price_currency=eur&expected_price=205",
-      "affiliate_link": "https://tp.media/r?marker=777254.web&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTFS0912MOW1%3Ft%3DPC17968443001796958300001720TFSLTNLGWAYTVKO_383e5d22a0e979ffe7f9bf03ce56e61b_19972%26search_date%3D12092026%26expected_price_uuid%3D01a095cb-13bd-8050-e56b-84b4274076f0%26static_fare_key%3DTY%257CP1%257CH0%257CL0%257CCH0%257CR0%257CTBC0%26itinerary_key%3DRP4aCBf6fJJsK4rv35QEpA%26origin_airports%3D0%26expected_price_source%3Dshare%26expected_price_currency%3Deur%26expected_price%3D205&p=4114&campaign_id=100",
-      "ts": "2026-09-14T18:28:26+00:00"
     },
     {
       "route": "TFS→AGP",
@@ -4167,23 +3827,6 @@
       "ts": "2026-09-14T18:28:34+00:00"
     },
     {
-      "route": "TFS→LED",
-      "origin": "TFS",
-      "destination": "LED",
-      "price": 205,
-      "price_mean": 205.0,
-      "zscore": null,
-      "n_obs": 6,
-      "deal": false,
-      "departure_at": "2026-11-22T09:40:00Z",
-      "airline": "V7",
-      "transfers": 2,
-      "duration_min": 655,
-      "link": "https://www.aviasales.com/search/TFS2211LED1?t=PC17953404001795483500002205TFSBIOSAWLED_12656292e91c08bd62a3804ba7bc68ba_20006&search_date=11092026&expected_price_uuid=01a08eb3-87ec-8030-6906-3a9d3e8de83c&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=6-qCBGeXtdlwb7HaZs-Spg&origin_airports=0&expected_price_source=share&expected_price_currency=eur&expected_price=205",
-      "affiliate_link": "https://tp.media/r?marker=777254.web&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FTFS2211LED1%3Ft%3DPC17953404001795483500002205TFSBIOSAWLED_12656292e91c08bd62a3804ba7bc68ba_20006%26search_date%3D11092026%26expected_price_uuid%3D01a08eb3-87ec-8030-6906-3a9d3e8de83c%26static_fare_key%3DTY%257CP1%257CH0%257CL0%257CCH0%257CR0%257CTBC0%26itinerary_key%3D6-qCBGeXtdlwb7HaZs-Spg%26origin_airports%3D0%26expected_price_source%3Dshare%26expected_price_currency%3Deur%26expected_price%3D205&p=4114&campaign_id=100",
-      "ts": "2026-09-14T18:28:35+00:00"
-    },
-    {
       "route": "FUE→MAD",
       "origin": "FUE",
       "destination": "MAD",
@@ -4318,23 +3961,6 @@
       "link": "https://www.aviasales.com/search/ACE3009SVQ1?t=FR17907558001790766600000120ACESVQ_9efe86189478cca2d2f887a648180fa1_1464&search_date=14092026&expected_price_uuid=01a0a10d-1e77-8030-27e0-7aed0c1032e7&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=s4c8JUnxhxHldfiQ47mUTg&expected_price_source=share&expected_price_currency=eur&expected_price=15",
       "affiliate_link": "https://tp.media/r?marker=777254.web&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FACE3009SVQ1%3Ft%3DFR17907558001790766600000120ACESVQ_9efe86189478cca2d2f887a648180fa1_1464%26search_date%3D14092026%26expected_price_uuid%3D01a0a10d-1e77-8030-27e0-7aed0c1032e7%26static_fare_key%3DTY%257CP0%257CH0%257CL0%257CCH0%257CR0%257CTBC0%26itinerary_key%3Ds4c8JUnxhxHldfiQ47mUTg%26expected_price_source%3Dshare%26expected_price_currency%3Deur%26expected_price%3D15&p=4114&campaign_id=100",
       "ts": "2026-09-14T18:28:57+00:00"
-    },
-    {
-      "route": "ACE→MOW",
-      "origin": "ACE",
-      "destination": "MOW",
-      "price": 233,
-      "price_mean": 233.0,
-      "zscore": null,
-      "n_obs": 6,
-      "deal": false,
-      "departure_at": "2026-12-10T12:15:00Z",
-      "airline": "EC",
-      "transfers": 2,
-      "duration_min": 750,
-      "link": "https://www.aviasales.com/search/ACE1012MOW1?t=EC17969049001797049800002235ACEBERESBVKO_19121d1834f16de972da42172d4c533f_22738&search_date=10092026&expected_price_uuid=01a08d74-a141-8050-22bd-d31d803eb9f6&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=d4wfh__Y2s_hUCh_DRX7cA&expected_price_source=share&expected_price_currency=eur&expected_price=233",
-      "affiliate_link": "https://tp.media/r?marker=777254.web&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FACE1012MOW1%3Ft%3DEC17969049001797049800002235ACEBERESBVKO_19121d1834f16de972da42172d4c533f_22738%26search_date%3D10092026%26expected_price_uuid%3D01a08d74-a141-8050-22bd-d31d803eb9f6%26static_fare_key%3DTY%257CP1%257CH0%257CL0%257CCH0%257CR0%257CTBC0%26itinerary_key%3Dd4wfh__Y2s_hUCh_DRX7cA%26expected_price_source%3Dshare%26expected_price_currency%3Deur%26expected_price%3D233&p=4114&campaign_id=100",
-      "ts": "2026-09-14T18:28:58+00:00"
     },
     {
       "route": "ACE→MRS",
@@ -4505,23 +4131,6 @@
       "link": "https://www.aviasales.com/search/CDT1311KRK1?t=FR17945673001794603900000610CDTSTNLTNKRK_42ddec339d0e5d3909ea09458a50fa66_6045&search_date=09092026&expected_price_uuid=01a0861a-e9c8-8030-ad74-73dc21949d84&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=VkZgZI-0KZ2_C4AjcDCo5Q&expected_price_source=share&expected_price_currency=eur&expected_price=61",
       "affiliate_link": "https://tp.media/r?marker=777254.web&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FCDT1311KRK1%3Ft%3DFR17945673001794603900000610CDTSTNLTNKRK_42ddec339d0e5d3909ea09458a50fa66_6045%26search_date%3D09092026%26expected_price_uuid%3D01a0861a-e9c8-8030-ad74-73dc21949d84%26static_fare_key%3DTY%257CP1%257CH0%257CL0%257CCH0%257CR0%257CTBC0%26itinerary_key%3DVkZgZI-0KZ2_C4AjcDCo5Q%26expected_price_source%3Dshare%26expected_price_currency%3Deur%26expected_price%3D61&p=4114&campaign_id=100",
       "ts": "2026-09-14T18:29:14+00:00"
-    },
-    {
-      "route": "CDT→MOW",
-      "origin": "CDT",
-      "destination": "MOW",
-      "price": 280,
-      "price_mean": 280.0,
-      "zscore": null,
-      "n_obs": 6,
-      "deal": false,
-      "departure_at": "2026-09-19T12:10:00+02:00",
-      "airline": "V7",
-      "transfers": 2,
-      "duration_min": 555,
-      "link": "https://www.aviasales.com/search/CDT1909MOW1?t=PC17898198001789959300002265CDTBIOSAWVKO_ecbff780e276339ad37dc83138c5dce1_27316&search_date=10092026&expected_price_uuid=01a08ce7-b628-8050-abca-c40fc42d762c&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=Qe1wHuvx0XP0LiCCSDK4yw&expected_price_source=share&expected_price_currency=eur&expected_price=280",
-      "affiliate_link": "https://tp.media/r?marker=777254.web&u=https%3A%2F%2Fwww.aviasales.com%2Fsearch%2FCDT1909MOW1%3Ft%3DPC17898198001789959300002265CDTBIOSAWVKO_ecbff780e276339ad37dc83138c5dce1_27316%26search_date%3D10092026%26expected_price_uuid%3D01a08ce7-b628-8050-abca-c40fc42d762c%26static_fare_key%3DTY%257CP1%257CH0%257CL0%257CCH0%257CR0%257CTBC0%26itinerary_key%3DQe1wHuvx0XP0LiCCSDK4yw%26expected_price_source%3Dshare%26expected_price_currency%3Deur%26expected_price%3D280&p=4114&campaign_id=100",
-      "ts": "2026-09-14T18:29:15+00:00"
     },
     {
       "route": "CDT→OPO",

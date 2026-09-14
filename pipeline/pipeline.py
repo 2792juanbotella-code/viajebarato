@@ -158,6 +158,11 @@ def record_and_score(origin: str, destination: str, price: float) -> dict:
 Z_THRESHOLD = -1.8      # precio muy por debajo de lo típico
 MIN_DISCOUNT_PCT = 0.25  # y al menos 25% más barato que la media
 
+# Destinos excluidos: espacio aéreo UE cerrado (Rusia/Ucrania) — ofertas no
+# operativas para viajeros españoles. backfill.py lo importa; purgar la BD si
+# ya existen filas (ver historial git 14-sep-2026).
+BLOCKLIST_DEST = {"MOW", "VKO", "SVO", "DME", "LED", "KBP", "IEV"}
+
 
 def find_deals(origins: list[str], max_dest: int = 12) -> list[dict]:
     deals = []
@@ -169,6 +174,8 @@ def find_deals(origins: list[str], max_dest: int = 12) -> list[dict]:
             continue
         for t in trend:
             dest = t["destination"]
+            if dest in BLOCKLIST_DEST:
+                continue
             try:
                 cur = cheapest_current(origin, dest)
             except Exception as e:  # noqa: BLE001
