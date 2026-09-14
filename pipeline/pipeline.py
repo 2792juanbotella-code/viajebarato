@@ -15,6 +15,7 @@ import argparse
 import json
 import os
 import sqlite3
+import ssl
 import sys
 import time
 from datetime import datetime, timezone
@@ -42,12 +43,28 @@ TOKEN = os.environ.get("TRAVELPAYOUTS_TOKEN", ENV.get("TRAVELPAYOUTS_TOKEN", "")
 MARKER = os.environ.get("TP_MARKER", ENV.get("MARKER", ""))
 
 
+def _ssl_ctx():
+    """Contexto SSL para el proxy de egress del gateway (si está activo).
+
+    Con SSL_CERT_FILE presente usamos la CA del proxy, quitando
+    VERIFY_X509_STRICT (Py>=3.13 lo activa por defecto y los leaf certs
+    del proxy no llevan Authority Key Identifier). Sin proxy (cron del
+    usuario) devuelve None → urlopen usa el contexto por defecto.
+    """
+    cafile = os.environ.get("SSL_CERT_FILE") or ""
+    if not (cafile and os.path.exists(cafile)):
+        return None
+    ctx = ssl.create_default_context(cafile=cafile)
+    ctx.verify_flags &= ~ssl.VERIFY_X509_STRICT
+    return ctx
+
+
 def _get(url, retries=3):
     last = None
     for i in range(retries):
         try:
             req = Request(url, headers={"Accept": "application/json"})
-            with urlopen(req, timeout=30) as r:
+            with urlopen(req, timeout=30, context=_ssl_ctx()) as r:
                 return json.loads(r.read().decode("utf-8"))
         except Exception as e:  # noqa: BLE001
             last = e
