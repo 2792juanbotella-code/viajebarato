@@ -14,6 +14,29 @@ ROOT = HERE.parent
 HTML = ROOT / "index.html"
 MARKER = "777254"
 
+AIRLINES = {
+    "FR": "Ryanair", "U2": "easyJet", "VY": "Vueling", "IB": "Iberia",
+    "UX": "Air Europa", "EW": "Eurowings", "PC": "Pegasus",
+    "W4": "Wizz Air", "W6": "Wizz Air", "TP": "TAP", "AF": "Air France",
+    "KL": "KLM", "LH": "Lufthansa", "BA": "British Airways",
+    "AZ": "ITA Airways", "A3": "Aegean", "SN": "Brussels Airlines",
+    "OS": "Austrian", "SK": "SAS", "DY": "Norwegian", "LS": "Jet2",
+    "HV": "Transavia", "TO": "Transavia FR", "NT": "Binter",
+    "YW": "Air Nostrum", "LX": "SWISS", "AY": "Finnair", "EI": "Aer Lingus",
+    "TK": "Turkish", "QR": "Qatar", "EK": "Emirates", "0B": "Blue Air",
+}
+
+def fmt_airline(code):
+    if not code:
+        return "—"
+    return AIRLINES.get(code, code)
+
+def fmt_transfers(t):
+    if t is None:
+        return "—"
+    t = int(t)
+    return "Directo" if t == 0 else ("1 escala" if t == 1 else f"{t} escalas")
+
 scan = json.loads((HERE / "scan_latest.json").read_text(encoding="utf-8"))
 deals = scan.get("deals", [])
 hot = scan.get("hot", [])
@@ -48,7 +71,8 @@ for d in rows[:10]:
         f'      <tr><td>{fire}{d["origin"]} → {d["destination"]}</td>'
         f'<td>{fmt_date(d.get("departure_at"))}</td>'
         f'<td class="price">{d["price"]:.0f} €{disc}</td>'
-        f'<td>—</td><td>—</td>'
+        f'<td>{fmt_airline(d.get("airline"))}</td>'
+        f'<td>{fmt_transfers(d.get("transfers"))}</td>'
         f'<td><a class="btn" target="_blank" rel="nofollow" href="{aff_link(d)}">Ver</a></td></tr>'
     )
 

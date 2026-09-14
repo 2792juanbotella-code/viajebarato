@@ -57,13 +57,13 @@
   <!-- BUSCADOR -->
   <section>
     <h2>✈️ Busca tu vuelo</h2>
-    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(120px,1fr)) 1fr;">
+    <form class="grid" style="grid-template-columns:repeat(auto-fit,minmax(120px,1fr)) 1fr;" onsubmit="return buscar(event)">
       <div><label>Origen (IATA)</label><input id="origen" value="VLC" maxlength="3" placeholder="VLC"></div>
       <div><label>Destino (IATA)</label><input id="destino" maxlength="3" placeholder="PMI"></div>
       <div><label>Fecha</label><input id="fecha" type="date"></div>
       <div><label>Pasajeros</label><select id="pax"><option>1</option><option>2</option><option>3</option><option>4</option></select></div>
-      <div style="align-self:end"><button class="cta" onclick="buscar()">Buscar vuelo</button></div>
-    </div>
+      <div style="align-self:end"><button class="cta" type="submit">Buscar vuelo</button></div>
+    </form>
     <p class="note">Ejemplos de códigos: VLC Valencia · MAD Madrid · BCN Barcelona · PMI Mallorca · LON Londres · NYC Nueva York</p>
   </section>
 
@@ -135,7 +135,9 @@
 </div>
 
 <script>
-function buscar(){
+(function(){var f=document.getElementById('fecha');var d=new Date(Date.now()-new Date().getTimezoneOffset()*60000);f.min=d.toISOString().slice(0,10)})();
+function buscar(e){
+  e.preventDefault();
   var o=document.getElementById('origen').value.trim().toUpperCase();
   var d=document.getElementById('destino').value.trim().toUpperCase();
   var f=document.getElementById('fecha').value;
@@ -145,7 +147,8 @@ function buscar(){
   var ymd=f.split('-');
   var ddmm=ymd[2]+ymd[1];
   var u=encodeURIComponent('https://www.aviasales.com/search/'+o+ddmm+d+p);
-  window.location.href='https://tp.media/r?marker=777254.web&u='+u+'&p=4114&campaign_id=100';
+  window.open('https://tp.media/r?marker=777254.web&u='+u+'&p=4114&campaign_id=100','_blank','noopener');
+  return false;
 }
 </script>
 </body>

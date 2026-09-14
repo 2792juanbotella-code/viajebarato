@@ -110,24 +110,31 @@ def _db():
 
 
 def record_and_score(origin: str, destination: str, price: float) -> dict:
-    """Guarda el precio y devuelve z-score vs histórico de la ruta."""
+    """Guarda el precio del día y devuelve z-score vs histórico PREVIO de la ruta.
+
+    - Media/std calculadas ANTES de insertar el precio actual: el precio nuevo
+      ya no arrastra su propia línea base (antes sesgaba la media hacia abajo
+      e hinchaba la std, haciendo z menos negativo de lo real).
+    - Un registro por ruta y día (seen_at = fecha UTC): re-escanear el mismo
+      día hace REPLACE en vez de duplicar filas (curva diaria limpia).
+    """
     con = _db()
-    now = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    today = datetime.now(timezone.utc).date().isoformat()
+    prior = [r[0] for r in con.execute(
+        "SELECT price FROM price_history WHERE origin=? AND destination=? AND seen_at<?",
+        (origin, destination, today)).fetchall()]
+    n = len(prior)
+    if n >= 5:
+        mean = sum(prior) / n
+        var = sum((p - mean) ** 2 for p in prior) / n
+        std = var ** 0.5
+        z = (price - mean) / std if std > 0 else None
+    else:
+        mean = std = z = None
     con.execute("INSERT OR REPLACE INTO price_history VALUES (?,?,?,?)",
-                (origin, destination, price, now))
+                (origin, destination, price, today))
     con.commit()
-    rows = con.execute(
-        "SELECT price FROM price_history WHERE origin=? AND destination=?",
-        (origin, destination)).fetchall()
     con.close()
-    prices = [r[0] for r in rows]
-    n = len(prices)
-    if n < 5:
-        return {"n": n, "zscore": None, "mean": None, "std": None}
-    mean = sum(prices) / n
-    var = sum((p - mean) ** 2 for p in prices) / n
-    std = var ** 0.5
-    z = (price - mean) / std if std > 0 else None
     return {"n": n, "zscore": z, "mean": mean, "std": std}
 
 
@@ -138,10 +145,18 @@ MIN_DISCOUNT_PCT = 0.25  # y al menos 25% más barato que la media
 def find_deals(origins: list[str], max_dest: int = 12) -> list[dict]:
     deals = []
     for origin in origins:
-        trend = trending(origin)[:max_dest]
+        try:
+            trend = trending(origin)[:max_dest]
+        except Exception as e:  # noqa: BLE001 — un origen caído no tumba el scan
+            print(f"warn: trending {origin} falló: {e}", file=sys.stderr)
+            continue
         for t in trend:
             dest = t["destination"]
-            cur = cheapest_current(origin, dest)
+            try:
+                cur = cheapest_current(origin, dest)
+            except Exception as e:  # noqa: BLE001
+                print(f"warn: {origin}→{dest} falló: {e}", file=sys.stderr)
+                continue
             if not cur:
                 continue
             price = cur["price"]
@@ -160,6 +175,9 @@ def find_deals(origins: list[str], max_dest: int = 12) -> list[dict]:
                 "n_obs": s["n"],
                 "deal": is_deal,
                 "departure_at": cur.get("departure_at"),
+                "airline": cur.get("airline"),
+                "transfers": cur.get("transfers"),
+                "duration_min": cur.get("duration_to"),
                 "link": "https://www.aviasales.com" + cur.get("link", ""),
                 # verificado en vivo 14-sep: u=<url completa de aviasales enc> → 200 aviasales (path solo → 400)
                 "affiliate_link": (f"https://tp.media/r?marker={MARKER}.web&u={quote('https://www.aviasales.com' + cur.get('link', ''), safe='')}&p=4114&campaign_id=100"
@@ -174,6 +192,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--origin", default="VLC")
     ap.add_argument("--json", action="store_true")
+    ap.add_argument("--output", help="fichero donde escribir el JSON (UTF-8 sin BOM; evita redirects de PowerShell)")
     args = ap.parse_args()
 
     origins = [o.strip().upper() for o in args.origin.split(",")]
@@ -181,8 +200,11 @@ def main():
 
     hot = [d for d in deals if d["deal"]]
     if args.json:
-        print(json.dumps({"ts": datetime.now(timezone.utc).isoformat(),
-                          "deals": deals, "hot": hot}, ensure_ascii=False, indent=2))
+        payload = json.dumps({"ts": datetime.now(timezone.utc).isoformat(),
+                              "deals": deals, "hot": hot}, ensure_ascii=False, indent=2)
+        if args.output:
+            Path(args.output).write_text(payload + "\n", encoding="utf-8")
+        print(payload)
     else:
         print(f"ViajeBarato scan {datetime.now():%Y-%m-%d %H:%M} — origins={origins}")
         print(f"rutas escaneadas: {len(deals)} | chollos (z≤{Z_THRESHOLD}): {len(hot)}")
