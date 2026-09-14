@@ -162,6 +162,21 @@ MIN_DISCOUNT_PCT = 0.25  # y al menos 25% más barato que la media
 # operativas para viajeros españoles. backfill.py lo importa; purgar la BD si
 # ya existen filas (ver historial git 14-sep-2026).
 BLOCKLIST_DEST = {"MOW", "VKO", "SVO", "DME", "LED", "KBP", "IEV"}
+MIN_HOURS_ADVANCE = 48  # descartar salidas inminentes (< 48h)
+MAX_TRANSFERS = 1       # máximo 1 escala para viajes prácticos
+
+
+def db_maintenance():
+    """Purga destinos bloqueados y registros de más de 180 días."""
+    try:
+        con = _db()
+        placeholders = ",".join("?" for _ in BLOCKLIST_DEST)
+        con.execute(f"DELETE FROM price_history WHERE destination IN ({placeholders})", list(BLOCKLIST_DEST))
+        con.execute("DELETE FROM price_history WHERE seen_at < date('now', '-180 days')")
+        con.commit()
+        con.close()
+    except Exception as e:
+        print(f"warn: db_maintenance falló: {e}", file=sys.stderr)
 
 
 def find_deals(origins: list[str], max_dest: int = 12) -> list[dict]:
@@ -183,6 +198,22 @@ def find_deals(origins: list[str], max_dest: int = 12) -> list[dict]:
                 continue
             if not cur:
                 continue
+
+            # Filtro anti-basura 1: antelación mínima (al menos 48h)
+            dep_str = cur.get("departure_at")
+            if dep_str:
+                try:
+                    dep_dt = datetime.fromisoformat(dep_str.replace("Z", "+00:00"))
+                    if (dep_dt - datetime.now(timezone.utc)).total_seconds() < MIN_HOURS_ADVANCE * 3600:
+                        continue
+                except Exception:
+                    pass
+
+            # Filtro anti-basura 2: no más de 1 escala
+            transfers = cur.get("transfers")
+            if transfers is not None and int(transfers) > MAX_TRANSFERS:
+                continue
+
             price = cur["price"]
             s = record_and_score(origin, dest, price)
             is_deal = (
@@ -209,6 +240,7 @@ def find_deals(origins: list[str], max_dest: int = 12) -> list[dict]:
                 "ts": datetime.now(timezone.utc).isoformat(timespec="seconds"),
             })
             time.sleep(0.4)  # rate limit friendly
+    db_maintenance()
     return deals
 
 

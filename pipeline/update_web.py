@@ -16,16 +16,27 @@ HTML = ROOT / "index.html"
 MARKER = "777254"
 
 AIRLINES = {
-    "FR": "Ryanair", "U2": "easyJet", "VY": "Vueling", "IB": "Iberia",
-    "UX": "Air Europa", "EW": "Eurowings", "PC": "Pegasus",
+    "FR": "Ryanair", "U2": "easyJet", "EC": "easyJet", "VY": "Vueling", "IB": "Iberia",
+    "I2": "Iberia Express", "UX": "Air Europa", "EW": "Eurowings", "PC": "Pegasus",
     "W4": "Wizz Air", "W6": "Wizz Air", "TP": "TAP", "AF": "Air France",
     "KL": "KLM", "LH": "Lufthansa", "BA": "British Airways",
     "AZ": "ITA Airways", "A3": "Aegean", "SN": "Brussels Airlines",
-    "OS": "Austrian", "SK": "SAS", "DY": "Norwegian", "LS": "Jet2",
-    "HV": "Transavia", "TO": "Transavia FR", "NT": "Binter",
+    "OS": "Austrian", "SK": "SAS", "DY": "Norwegian", "D8": "Norwegian",
+    "LS": "Jet2", "HV": "Transavia", "TO": "Transavia FR", "NT": "Binter",
     "YW": "Air Nostrum", "LX": "SWISS", "AY": "Finnair", "EI": "Aer Lingus",
     "TK": "Turkish", "QR": "Qatar", "EK": "Emirates", "0B": "Blue Air",
+    "V7": "Volotea", "DE": "Condor", "X3": "TUI fly",
 }
+
+REGIONS = {
+    "madrid": {"MAD"},
+    "cataluna": {"BCN", "GRO", "REU"},
+    "levante": {"VLC", "ALC", "CDT", "RMU"},
+    "andalucia": {"AGP", "SVQ", "GRX", "XRY", "LEI"},
+    "norte": {"BIO", "SDR", "OVD", "SCQ", "LCG", "VGO", "VIT", "PNA", "ZAZ", "LEN", "BJZ", "MLN"},
+    "islas": {"PMI", "IBZ", "MAH", "LPA", "TFN", "TFS", "FUE", "ACE", "SPC", "VDE", "GMZ"},
+}
+AIRPORT_TO_REGION = {ap: reg for reg, aps in REGIONS.items() for ap in aps}
 
 def fmt_airline(code):
     if not code:
@@ -42,8 +53,7 @@ scan = json.loads((HERE / "scan_latest.json").read_text(encoding="utf-8"))
 deals = scan.get("deals", [])
 hot = scan.get("hot", [])
 
-rows = hot if hot else sorted(deals, key=lambda d: d["price"] or 9e9)[:10]
-if not rows:
+if not deals and not hot:
     raise SystemExit("sin datos en scan_latest.json — no toco la web")
 
 def aff_link(d):
@@ -60,22 +70,52 @@ def fmt_date(s):
     except ValueError:
         return s[:10]
 
+# Selección multirregión equilibrada:
+# 1. Todos los chollos 'hot'
+# 2. Hasta 6 mejores precios por cada región de España
+selected = []
+seen = set()
+
+for h in hot:
+    key = (h["origin"], h["destination"], h.get("departure_at"))
+    if key not in seen:
+        seen.add(key)
+        selected.append(h)
+
+by_reg = {r: [] for r in REGIONS}
+for d in sorted(deals, key=lambda x: x.get("price") or 9e9):
+    reg = AIRPORT_TO_REGION.get(d["origin"])
+    if reg and len(by_reg[reg]) < 6:
+        key = (d["origin"], d["destination"], d.get("departure_at"))
+        if key not in seen:
+            seen.add(key)
+            by_reg[reg].append(d)
+            selected.append(d)
+
+selected.sort(key=lambda x: (not x.get("deal", False), x.get("price") or 9e9))
+
 out = []
-for d in rows[:10]:
-    fire = "🔥 " if d["deal"] else ""
+for d in selected:
+    fire = "🔥 " if d.get("deal") else ""
     disc = ""
     if d.get("price_mean"):
         pct = round((1 - d["price"] / d["price_mean"]) * 100)
         if pct > 0:
-            disc = f' <span style="color:var(--ok)">−{pct}%</span>'
+            disc = f' <span class="badge-disc">−{pct}%</span>'
+    reg = AIRPORT_TO_REGION.get(d["origin"], "otros")
     out.append(
-        f'      <tr><td>{fire}{d["origin"]} → {d["destination"]}</td>'
-        f'<td>{fmt_date(d.get("departure_at"))}</td>'
-        f'<td class="price">{d["price"]:.0f} €{disc}</td>'
-        f'<td>{fmt_airline(d.get("airline"))}</td>'
-        f'<td>{fmt_transfers(d.get("transfers"))}</td>'
-        f'<td><a class="btn" target="_blank" rel="nofollow" href="{aff_link(d)}">Ver</a></td></tr>'
+        f'      <tr data-origin="{d["origin"]}" data-region="{reg}" data-price="{d["price"]:.0f}">'
+        f'<td class="td-route">{fire}{d["origin"]} → {d["destination"]}</td>'
+        f'<td class="td-date">{fmt_date(d.get("departure_at"))}</td>'
+        f'<td class="td-price price">{d["price"]:.0f} €{disc}</td>'
+        f'<td class="td-airline">{fmt_airline(d.get("airline"))}</td>'
+        f'<td class="td-transfers">{fmt_transfers(d.get("transfers"))}</td>'
+        f'<td class="td-action"><a class="btn" target="_blank" rel="nofollow noopener" href="{aff_link(d)}">Ver</a></td></tr>'
     )
+
+out.append(
+    '      <tr id="noDealsRow" style="display:none"><td colspan="6" style="text-align:center;padding:24px 10px;color:var(--mut)">No hay chollos activos para esta región en la foto de hoy. Prueba otra zona o usa el buscador superior.</td></tr>'
+)
 
 html = HTML.read_text(encoding="utf-8")
 table = "\n".join(out) + f'\n      <tr><td colspan="6" class="note">Actualizado {datetime.now():%d/%m/%Y %H:%M} · precios de un solo día, sin equipaje</td></tr>'
@@ -98,6 +138,6 @@ if r.returncode == 0:
         push = ["git", "-c", "http.sslBackend=openssl",
                 "-c", f"http.sslCAInfo={cafile}", "push", "-q", "origin", "main"]
     subprocess.run(push, cwd=ROOT, check=True)
-    print(f"web actualizada: {len(rows)} rutas, push OK")
+    print(f"web actualizada: {len(selected)} rutas, push OK")
 else:
     print("nada que commitear:", r.stdout, r.stderr)
