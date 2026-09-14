@@ -64,6 +64,11 @@
       <div><label>Pasajeros</label><select id="pax"><option>1</option><option>2</option><option>3</option><option>4</option></select></div>
       <div style="align-self:end"><button class="cta" type="submit">Buscar vuelo</button></div>
     </form>
+    <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+      <span class="note" style="margin:0">Más opciones para el mismo destino:</span>
+      <a class="btn" id="gHotels" target="_blank" rel="nofollow noopener" href="https://www.google.com/travel/search">🏨 Hoteles (Google)</a>
+      <a class="btn" id="gRentals" target="_blank" rel="nofollow noopener" href="https://www.google.com/travel/search">🏠 Holiday Rentals (Google)</a>
+    </div>
     <p class="note">Ejemplos de códigos: VLC Valencia · MAD Madrid · BCN Barcelona · PMI Mallorca · LON Londres · NYC Nueva York</p>
   </section>
 
@@ -136,6 +141,19 @@
 
 <script>
 (function(){var f=document.getElementById('fecha');var d=new Date(Date.now()-new Date().getTimezoneOffset()*60000);f.min=d.toISOString().slice(0,10)})();
+var DEST={'PMI':'Mallorca','MAD':'Madrid','BCN':'Barcelona','VLC':'Valencia','LON':'Londres','NYC':'Nueva York','ROM':'Roma','PAR':'París','AMS':'Ámsterdam','LIS':'Lisboa','MIL':'Milán','BER':'Berlín','DUB':'Dublín','BRU':'Bruselas','AGP':'Málaga','SVQ':'Sevilla','IBZ':'Ibiza','BIO':'Bilbao','ATH':'Atenas','IST':'Estambul','CAI':'El Cairo','RAK':'Marrakech','BKK':'Bangkok','MNL':'Manila','HKG':'Hong Kong','TYO':'Tokio','KUL':'Kuala Lumpur','SGN':'Ho Chi Minh','DPS':'Bali','CUN':'Cancún','PUJ':'Punta Cana','HAV':'La Habana','NY':'Nueva York','LAX':'Los Ángeles','MIA':'Miami','SFO':'San Francisco'};
+var MESES=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+function gDest(){var d=document.getElementById('destino').value.trim().toUpperCase();return DEST[d]||d}
+function gFecha(){var f=document.getElementById('fecha').value;if(!f)return '';var p=f.split('-');return ' el '+Number(p[2])+' de '+MESES[Number(p[1])-1]+' de '+p[0]}
+function updateGoogleLinks(){
+  var d=gDest();var f=gFecha();
+  var qh='hoteles en '+(d||'')+(d?f:'');
+  var qr='alquileres vacacionales en '+(d||'')+(d?f:'');
+  document.getElementById('gHotels').href='https://www.google.com/travel/search?q='+encodeURIComponent(qh.trim());
+  document.getElementById('gRentals').href='https://www.google.com/travel/search?q='+encodeURIComponent(qr.trim());
+}
+['destino','fecha'].forEach(function(id){document.getElementById(id).addEventListener('input',updateGoogleLinks)});
+updateGoogleLinks();
 function buscar(e){
   e.preventDefault();
   var o=document.getElementById('origen').value.trim().toUpperCase();
